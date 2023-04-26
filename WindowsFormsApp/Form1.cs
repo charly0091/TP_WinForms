@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp
 {
-    public partial class Form1 : Form
+    public partial class Productos : Form
     {
-        public Form1()
+        public Productos()
         {
             InitializeComponent();
+        }
+
+        private void imgProducto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grillaProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
