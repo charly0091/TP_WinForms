@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using negocio;
 
 namespace WindowsFormsApp
 {
@@ -17,14 +18,15 @@ namespace WindowsFormsApp
             InitializeComponent();
         }
 
-        private void imgProducto_Click(object sender, EventArgs e)
+        private void imgProd_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void grillaProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataProd_Load(object sender, EventArgs e)
         {
-
+            ArticuloNegocio negocio=new ArticuloNegocio();
+            dataProd.DataSource = negocio.listar();
         }
     }
 }
