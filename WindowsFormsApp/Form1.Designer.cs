@@ -41,7 +41,7 @@
             this.dataProd.Name = "dataProd";
             this.dataProd.Size = new System.Drawing.Size(357, 317);
             this.dataProd.TabIndex = 0;
-            this.dataProd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProd_CellContentClick);
+            //this.dataProd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProd_CellContentClick);
             // 
             // imgProd
             // 
