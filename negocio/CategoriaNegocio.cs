@@ -1,9 +1,9 @@
-﻿using dominio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using dominio;
 
 
 namespace negocio
@@ -12,7 +12,7 @@ namespace negocio
     {
         public List<Categoria> listar()
         {
-            List<Categtoria> lista = new List<Categoria>();
+            List<Categoria> lista = new List<Categoria>();
             AccesoDatos datos = new AccesoDatos();
 
             try

@@ -37,27 +37,31 @@
             // dataProd
             // 
             this.dataProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataProd.Location = new System.Drawing.Point(402, 59);
+            this.dataProd.Location = new System.Drawing.Point(536, 73);
+            this.dataProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataProd.Name = "dataProd";
-            this.dataProd.Size = new System.Drawing.Size(357, 317);
+            this.dataProd.RowHeadersWidth = 51;
+            this.dataProd.Size = new System.Drawing.Size(476, 390);
             this.dataProd.TabIndex = 0;
-            //this.dataProd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProd_CellContentClick);
+            this.dataProd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProd_CellContentClick);
             // 
             // imgProd
             // 
-            this.imgProd.Location = new System.Drawing.Point(42, 59);
+            this.imgProd.Location = new System.Drawing.Point(56, 73);
+            this.imgProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgProd.Name = "imgProd";
-            this.imgProd.Size = new System.Drawing.Size(340, 317);
+            this.imgProd.Size = new System.Drawing.Size(453, 390);
             this.imgProd.TabIndex = 1;
             this.imgProd.TabStop = false;
             // 
             // Productos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.imgProd);
             this.Controls.Add(this.dataProd);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Productos";
             this.Text = "Productos";
             ((System.ComponentModel.ISupportInitialize)(this.dataProd)).EndInit();

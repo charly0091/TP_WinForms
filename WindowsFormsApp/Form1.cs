@@ -12,6 +12,8 @@ using negocio;
 namespace WindowsFormsApp
 {
     public partial class Productos : Form
+
+
     {
         public Productos()
         {
@@ -27,6 +29,11 @@ namespace WindowsFormsApp
         {
             ArticuloNegocio negocio=new ArticuloNegocio();
             dataProd.DataSource = negocio.listar();
+        }
+
+        private void dataProd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
