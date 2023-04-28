@@ -20,20 +20,10 @@ namespace WindowsFormsApp
             InitializeComponent();
         }
 
-        private void imgProd_Click(object sender, EventArgs e)
+        private void Productos_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void dataProd_Load(object sender, EventArgs e)
-        {
-            ArticuloNegocio negocio=new ArticuloNegocio();
-            dataProd.DataSource = negocio.listar();
-        }
-
-        private void dataProd_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            dgbArt.DataSource = negocio.listar();
         }
     }
 }

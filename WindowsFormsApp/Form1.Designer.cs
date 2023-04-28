@@ -28,52 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataProd = new System.Windows.Forms.DataGridView();
-            this.imgProd = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataProd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgProd)).BeginInit();
+            this.dgbArt = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbArt)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataProd
+            // dgbArt
             // 
-            this.dataProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataProd.Location = new System.Drawing.Point(536, 73);
-            this.dataProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataProd.Name = "dataProd";
-            this.dataProd.RowHeadersWidth = 51;
-            this.dataProd.Size = new System.Drawing.Size(476, 390);
-            this.dataProd.TabIndex = 0;
-            this.dataProd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProd_CellContentClick);
-            // 
-            // imgProd
-            // 
-            this.imgProd.Location = new System.Drawing.Point(56, 73);
-            this.imgProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.imgProd.Name = "imgProd";
-            this.imgProd.Size = new System.Drawing.Size(453, 390);
-            this.imgProd.TabIndex = 1;
-            this.imgProd.TabStop = false;
+            this.dgbArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbArt.Location = new System.Drawing.Point(263, 58);
+            this.dgbArt.Name = "dgbArt";
+            this.dgbArt.RowHeadersWidth = 51;
+            this.dgbArt.Size = new System.Drawing.Size(484, 329);
+            this.dgbArt.TabIndex = 0;
             // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.imgProd);
-            this.Controls.Add(this.dataProd);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgbArt);
             this.Name = "Productos";
             this.Text = "Productos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataProd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgProd)).EndInit();
+            this.Load += new System.EventHandler(this.Productos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgbArt)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataProd;
-        private System.Windows.Forms.PictureBox imgProd;
+        private System.Windows.Forms.DataGridView dgbArt;
     }
 }
 

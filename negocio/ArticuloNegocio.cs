@@ -13,7 +13,6 @@ namespace negocio
         {
             List<Articulo> lista = new List<Articulo>();
             AccesoDatos datos = new AccesoDatos();
-
             try
             {
                 datos.setearConsulta("Select Id,Codigo,Nombre,Descripcion,Precio From Articulos");
@@ -21,12 +20,15 @@ namespace negocio
 
                 while (datos.Lector.Read())
                 {
+                    
                     Articulo aux = new Articulo();
                     aux.Id = (int)datos.Lector["Id"];
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
-                    aux.Precio = (float)datos.Lector["Precio"];
+                    aux.IdMarca = (int)datos.Lector["IdMarca"];
+                    //aux.IdCategoria = (int)datos.Lector["IdCategoria"];
+                    //aux.Precio = (float)datos.Lector["Precio"];
 
                     lista.Add(aux);
                 }
