@@ -12,7 +12,7 @@ namespace negocio
     {
         public List<Categoria> listar()
         {
-            List<Categtoria> lista = new List<Categoria>();
+            List<Categoria> lista = new List<Categoria>();
             AccesoDatos datos = new AccesoDatos();
 
             try
