@@ -18,15 +18,14 @@ namespace WindowsFormsApp
             InitializeComponent();
         }
 
-        private void imgProd_Click(object sender, EventArgs e)
+        private void dgbArt_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
-        private void dataProd_Load(object sender, EventArgs e)
+          private void dgbArt_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio=new ArticuloNegocio();
-            dataProd.DataSource = negocio.listar();
+            dgbArt.DataSource = negocio.listar();
         }
     }
 }

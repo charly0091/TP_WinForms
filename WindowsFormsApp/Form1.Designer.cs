@@ -28,48 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataProd = new System.Windows.Forms.DataGridView();
-            this.imgProd = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataProd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgProd)).BeginInit();
+            this.dgbArt = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbArt)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataProd
+            // dgbArt
             // 
-            this.dataProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataProd.Location = new System.Drawing.Point(402, 59);
-            this.dataProd.Name = "dataProd";
-            this.dataProd.Size = new System.Drawing.Size(357, 317);
-            this.dataProd.TabIndex = 0;
-            //this.dataProd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProd_CellContentClick);
-            // 
-            // imgProd
-            // 
-            this.imgProd.Location = new System.Drawing.Point(42, 59);
-            this.imgProd.Name = "imgProd";
-            this.imgProd.Size = new System.Drawing.Size(340, 317);
-            this.imgProd.TabIndex = 1;
-            this.imgProd.TabStop = false;
+            this.dgbArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbArt.Location = new System.Drawing.Point(398, 58);
+            this.dgbArt.Name = "dgbArt";
+            this.dgbArt.Size = new System.Drawing.Size(349, 329);
+            this.dgbArt.TabIndex = 0;
+            this.dgbArt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbArt_CellContentClick);
             // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.imgProd);
-            this.Controls.Add(this.dataProd);
+            this.Controls.Add(this.dgbArt);
             this.Name = "Productos";
             this.Text = "Productos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataProd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgProd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbArt)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataProd;
-        private System.Windows.Forms.PictureBox imgProd;
+        private System.Windows.Forms.DataGridView dgbArt;
     }
 }
 
