@@ -26,7 +26,7 @@ namespace WindowsFormsApp
             ArticuloNegocio negocio = new ArticuloNegocio();
             listaArticulo = negocio.listar();
             dgbArt.DataSource = listaArticulo;
-
+            dgbArt.Columns["Imagen"].Visible = false;
             cargarImagen(listaArticulo[0].Imagen.ImagenUrl);
         }
 
