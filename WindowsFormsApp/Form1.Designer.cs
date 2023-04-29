@@ -43,6 +43,8 @@
             this.dgbArt.RowHeadersWidth = 51;
             this.dgbArt.Size = new System.Drawing.Size(565, 267);
             this.dgbArt.TabIndex = 0;
+            this.dgbArt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbArt_CellContentClick);
+            this.dgbArt.SelectionChanged += new System.EventHandler(this.dgbArt_SelectionChanged);
             // 
             // pbArt
             // 
