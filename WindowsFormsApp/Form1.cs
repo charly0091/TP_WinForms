@@ -52,5 +52,21 @@ namespace WindowsFormsApp
                 pbArt.Load("https://user-images.githubusercontent.com/43302778/106805462-7a908400-6645-11eb-958f-cd72b74a17b3.jpg");
             }
         }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nosotrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Nosotros nosotros = new Nosotros();
+            nosotros.ShowDialog();
+
+        }
     }
 }
