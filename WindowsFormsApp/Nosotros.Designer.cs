@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp
 {
-    partial class Productos
+    partial class Nosotros
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgbArt = new System.Windows.Forms.DataGridView();
-            this.pbArt = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nosotros));
             this.menu = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nosotrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dgbArt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbArt)).BeginInit();
+            this.pbNosotros = new System.Windows.Forms.PictureBox();
+            this.dgbNosotros = new System.Windows.Forms.DataGridView();
             this.menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNosotros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbNosotros)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgbArt
-            // 
-            this.dgbArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbArt.Location = new System.Drawing.Point(328, 100);
-            this.dgbArt.Margin = new System.Windows.Forms.Padding(2);
-            this.dgbArt.Name = "dgbArt";
-            this.dgbArt.RowHeadersWidth = 51;
-            this.dgbArt.Size = new System.Drawing.Size(565, 267);
-            this.dgbArt.TabIndex = 0;
-            this.dgbArt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbArt_CellContentClick);
-            this.dgbArt.SelectionChanged += new System.EventHandler(this.dgbArt_SelectionChanged);
-            // 
-            // pbArt
-            // 
-            this.pbArt.Location = new System.Drawing.Point(27, 100);
-            this.pbArt.Name = "pbArt";
-            this.pbArt.Size = new System.Drawing.Size(285, 266);
-            this.pbArt.TabIndex = 1;
-            this.pbArt.TabStop = false;
             // 
             // menu
             // 
@@ -67,8 +48,8 @@
             this.nosotrosToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(932, 24);
-            this.menu.TabIndex = 2;
+            this.menu.Size = new System.Drawing.Size(1115, 24);
+            this.menu.TabIndex = 3;
             this.menu.Text = "menu";
             // 
             // homeToolStripMenuItem
@@ -90,27 +71,44 @@
             this.nosotrosToolStripMenuItem.Name = "nosotrosToolStripMenuItem";
             this.nosotrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.nosotrosToolStripMenuItem.Text = "Nosotros";
-            this.nosotrosToolStripMenuItem.Click += new System.EventHandler(this.nosotrosToolStripMenuItem_Click);
             // 
-            // Productos
+            // pbNosotros
+            // 
+            this.pbNosotros.ErrorImage = null;
+            this.pbNosotros.InitialImage = null;
+            this.pbNosotros.Location = new System.Drawing.Point(35, 87);
+            this.pbNosotros.Name = "pbNosotros";
+            this.pbNosotros.Size = new System.Drawing.Size(284, 261);
+            this.pbNosotros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbNosotros.TabIndex = 7;
+            this.pbNosotros.TabStop = false;
+            // 
+            // dgbNosotros
+            // 
+            this.dgbNosotros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbNosotros.Location = new System.Drawing.Point(344, 87);
+            this.dgbNosotros.Name = "dgbNosotros";
+            this.dgbNosotros.Size = new System.Drawing.Size(743, 261);
+            this.dgbNosotros.TabIndex = 8;
+            this.dgbNosotros.SelectionChanged += new System.EventHandler(this.dgbNosotros_SelectionChanged);
+            // 
+            // Nosotros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 476);
-            this.Controls.Add(this.pbArt);
-            this.Controls.Add(this.dgbArt);
+            this.ClientSize = new System.Drawing.Size(1115, 450);
+            this.Controls.Add(this.dgbNosotros);
+            this.Controls.Add(this.pbNosotros);
             this.Controls.Add(this.menu);
-            this.MainMenuStrip = this.menu;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Productos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Nosotros";
             this.Text = "Wardrobe";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Productos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgbArt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbArt)).EndInit();
+            this.Load += new System.EventHandler(this.Nosotros_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNosotros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbNosotros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,12 +116,11 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgbArt;
-        private System.Windows.Forms.PictureBox pbArt;
         private System.Windows.Forms.MenuStrip menu;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nosotrosToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pbNosotros;
+        private System.Windows.Forms.DataGridView dgbNosotros;
     }
 }
-
