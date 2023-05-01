@@ -31,10 +31,6 @@ namespace WindowsFormsApp
             cargarImagen(listaArticulo[0].Imagen.ImagenUrl);
         }
 
-        private void dgbArt_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void dgbArt_SelectionChanged(object sender, EventArgs e)
         {
@@ -68,6 +64,16 @@ namespace WindowsFormsApp
             Nosotros nosotros = new Nosotros();
             nosotros.ShowDialog();
 
+        }
+
+        private void btnVerDetalle_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = new Articulo();
+            seleccionado = (Articulo)dgbArt.CurrentRow.DataBoundItem;
+
+            Detalle verDetalle = new Detalle(seleccionado);
+            verDetalle.ShowDialog();
+            //cargar();
         }
     }
 }
