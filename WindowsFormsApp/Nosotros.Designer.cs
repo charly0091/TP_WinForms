@@ -74,21 +74,27 @@
             // 
             // pbNosotros
             // 
+            this.pbNosotros.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbNosotros.ErrorImage = null;
             this.pbNosotros.InitialImage = null;
-            this.pbNosotros.Location = new System.Drawing.Point(35, 87);
+            this.pbNosotros.Location = new System.Drawing.Point(362, 62);
             this.pbNosotros.Name = "pbNosotros";
-            this.pbNosotros.Size = new System.Drawing.Size(284, 261);
+            this.pbNosotros.Size = new System.Drawing.Size(300, 300);
             this.pbNosotros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbNosotros.TabIndex = 7;
             this.pbNosotros.TabStop = false;
             // 
             // dgbNosotros
             // 
+            this.dgbNosotros.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgbNosotros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgbNosotros.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgbNosotros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgbNosotros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgbNosotros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbNosotros.Location = new System.Drawing.Point(344, 87);
+            this.dgbNosotros.Location = new System.Drawing.Point(362, 377);
             this.dgbNosotros.Name = "dgbNosotros";
-            this.dgbNosotros.Size = new System.Drawing.Size(743, 261);
+            this.dgbNosotros.Size = new System.Drawing.Size(300, 100);
             this.dgbNosotros.TabIndex = 8;
             this.dgbNosotros.SelectionChanged += new System.EventHandler(this.dgbNosotros_SelectionChanged);
             // 
@@ -96,7 +102,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1115, 450);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(1115, 498);
             this.Controls.Add(this.dgbNosotros);
             this.Controls.Add(this.pbNosotros);
             this.Controls.Add(this.menu);
