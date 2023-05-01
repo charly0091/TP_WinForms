@@ -33,6 +33,8 @@
             this.menu = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nosotroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nosotrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgbArt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArt)).BeginInit();
@@ -46,11 +48,11 @@
             this.dgbArt.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgbArt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgbArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbArt.Location = new System.Drawing.Point(328, 100);
-            this.dgbArt.Margin = new System.Windows.Forms.Padding(2);
+            this.dgbArt.Location = new System.Drawing.Point(437, 123);
+            this.dgbArt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgbArt.Name = "dgbArt";
             this.dgbArt.RowHeadersWidth = 51;
-            this.dgbArt.Size = new System.Drawing.Size(565, 267);
+            this.dgbArt.Size = new System.Drawing.Size(753, 329);
             this.dgbArt.TabIndex = 0;
             this.dgbArt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbArt_CellContentClick);
             this.dgbArt.SelectionChanged += new System.EventHandler(this.dgbArt_SelectionChanged);
@@ -58,9 +60,10 @@
             // pbArt
             // 
             this.pbArt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbArt.Location = new System.Drawing.Point(27, 100);
+            this.pbArt.Location = new System.Drawing.Point(36, 123);
+            this.pbArt.Margin = new System.Windows.Forms.Padding(4);
             this.pbArt.Name = "pbArt";
-            this.pbArt.Size = new System.Drawing.Size(285, 266);
+            this.pbArt.Size = new System.Drawing.Size(380, 327);
             this.pbArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbArt.TabIndex = 1;
             this.pbArt.TabStop = false;
@@ -70,12 +73,16 @@
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
             this.productosToolStripMenuItem,
+            this.categoriasToolStripMenuItem,
+            this.nosotroToolStripMenuItem,
             this.nosotrosToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(932, 24);
+            this.menu.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menu.Size = new System.Drawing.Size(1243, 24);
             this.menu.TabIndex = 2;
             this.menu.Text = "menu";
+            this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_ItemClicked);
             // 
             // homeToolStripMenuItem
             // 
@@ -89,7 +96,20 @@
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
             this.productosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.productosToolStripMenuItem.Text = "Productos";
-            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
+            // 
+            // categoriasToolStripMenuItem
+            // 
+            this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.categoriasToolStripMenuItem.Text = "Categorias";
+            this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_click);
+            // 
+            // nosotroToolStripMenuItem
+            // 
+            this.nosotroToolStripMenuItem.Name = "nosotroToolStripMenuItem";
+            this.nosotroToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.nosotroToolStripMenuItem.Text = "Marcas";
+            this.nosotroToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
             // nosotrosToolStripMenuItem
             // 
@@ -100,15 +120,16 @@
             // 
             // Productos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(932, 476);
+            this.ClientSize = new System.Drawing.Size(1243, 586);
             this.Controls.Add(this.pbArt);
             this.Controls.Add(this.dgbArt);
             this.Controls.Add(this.menu);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menu;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Productos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wardrobe";
@@ -130,6 +151,8 @@
         private System.Windows.Forms.MenuStrip menu;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nosotroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nosotrosToolStripMenuItem;
     }
 }

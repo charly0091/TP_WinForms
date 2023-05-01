@@ -58,15 +58,28 @@ namespace WindowsFormsApp
         {
         }
 
-        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Marcas marcas = new Marcas();
+            marcas.ShowDialog();
 
+        }
+
+        private void categoriasToolStripMenuItem_click(object sender, EventArgs e)
+        {
+            Categorias categorias = new Categorias();
+            categorias.ShowDialog();
         }
 
         private void nosotrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Nosotros nosotros = new Nosotros();
             nosotros.ShowDialog();
+
+        }
+
+        private void menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
 
         }
     }
