@@ -63,10 +63,21 @@ namespace WindowsFormsApp
 
         }
 
+        private void categoriasToolStripMenuItem_click(object sender, EventArgs e)
+        {
+            Categorias categorias = new Categorias();
+            categorias.ShowDialog();
+        }
+
         private void nosotrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Nosotros nosotros = new Nosotros();
             nosotros.ShowDialog();
+
+        }
+
+        private void menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
 
         }
     }

@@ -48,7 +48,8 @@
             this.nosotrosToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(1115, 24);
+            this.menu.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menu.Size = new System.Drawing.Size(1487, 24);
             this.menu.TabIndex = 3;
             this.menu.Text = "menu";
             // 
@@ -77,9 +78,10 @@
             this.pbNosotros.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbNosotros.ErrorImage = null;
             this.pbNosotros.InitialImage = null;
-            this.pbNosotros.Location = new System.Drawing.Point(362, 62);
+            this.pbNosotros.Location = new System.Drawing.Point(415, 153);
+            this.pbNosotros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbNosotros.Name = "pbNosotros";
-            this.pbNosotros.Size = new System.Drawing.Size(300, 300);
+            this.pbNosotros.Size = new System.Drawing.Size(468, 292);
             this.pbNosotros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbNosotros.TabIndex = 7;
             this.pbNosotros.TabStop = false;
@@ -92,26 +94,27 @@
             this.dgbNosotros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgbNosotros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgbNosotros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbNosotros.Location = new System.Drawing.Point(362, 377);
+            this.dgbNosotros.Location = new System.Drawing.Point(483, 464);
+            this.dgbNosotros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgbNosotros.Name = "dgbNosotros";
-            this.dgbNosotros.Size = new System.Drawing.Size(300, 100);
+            this.dgbNosotros.Size = new System.Drawing.Size(400, 123);
             this.dgbNosotros.TabIndex = 8;
             this.dgbNosotros.SelectionChanged += new System.EventHandler(this.dgbNosotros_SelectionChanged);
             // 
             // Nosotros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1115, 498);
+            this.ClientSize = new System.Drawing.Size(1487, 613);
             this.Controls.Add(this.dgbNosotros);
             this.Controls.Add(this.pbNosotros);
             this.Controls.Add(this.menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Nosotros";
             this.Text = "Wardrobe";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Nosotros_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
