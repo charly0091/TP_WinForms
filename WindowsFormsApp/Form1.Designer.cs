@@ -35,6 +35,7 @@
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nosotroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nosotrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgbArt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArt)).BeginInit();
             this.menu.SuspendLayout();
@@ -60,7 +61,7 @@
             // 
             this.pbArt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbArt.Location = new System.Drawing.Point(36, 123);
-            this.pbArt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbArt.Margin = new System.Windows.Forms.Padding(4);
             this.pbArt.Name = "pbArt";
             this.pbArt.Size = new System.Drawing.Size(380, 327);
             this.pbArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -73,7 +74,8 @@
             this.homeToolStripMenuItem,
             this.productosToolStripMenuItem,
             this.categoriasToolStripMenuItem,
-            this.nosotroToolStripMenuItem});
+            this.nosotroToolStripMenuItem,
+            this.nosotrosToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
@@ -94,7 +96,6 @@
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
             this.productosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.productosToolStripMenuItem.Text = "Productos";
-            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // categoriasToolStripMenuItem
             // 
@@ -106,9 +107,16 @@
             // nosotroToolStripMenuItem
             // 
             this.nosotroToolStripMenuItem.Name = "nosotroToolStripMenuItem";
-            this.nosotroToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.nosotroToolStripMenuItem.Text = "Nosotros";
-            this.nosotroToolStripMenuItem.Click += new System.EventHandler(this.nosotrosToolStripMenuItem_Click);
+            this.nosotroToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.nosotroToolStripMenuItem.Text = "Marcas";
+            this.nosotroToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
+            // 
+            // nosotrosToolStripMenuItem
+            // 
+            this.nosotrosToolStripMenuItem.Name = "nosotrosToolStripMenuItem";
+            this.nosotrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.nosotrosToolStripMenuItem.Text = "Nosotros";
+            this.nosotrosToolStripMenuItem.Click += new System.EventHandler(this.nosotrosToolStripMenuItem_Click);
             // 
             // Productos
             // 
@@ -145,6 +153,7 @@
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nosotroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nosotrosToolStripMenuItem;
     }
 }
 
