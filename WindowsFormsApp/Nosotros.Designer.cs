@@ -33,12 +33,11 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nosotrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.imgNosotros = new System.Windows.Forms.PictureBox();
+            this.pbNosotros = new System.Windows.Forms.PictureBox();
+            this.dgbNosotros = new System.Windows.Forms.DataGridView();
             this.menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgNosotros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNosotros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbNosotros)).BeginInit();
             this.SuspendLayout();
             // 
             // menu
@@ -49,7 +48,7 @@
             this.nosotrosToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(800, 24);
+            this.menu.Size = new System.Drawing.Size(1115, 24);
             this.menu.TabIndex = 3;
             this.menu.Text = "menu";
             // 
@@ -73,56 +72,33 @@
             this.nosotrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.nosotrosToolStripMenuItem.Text = "Nosotros";
             // 
-            // label1
+            // pbNosotros
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(394, 243);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "María Clara Visconti";
+            this.pbNosotros.ErrorImage = null;
+            this.pbNosotros.InitialImage = null;
+            this.pbNosotros.Location = new System.Drawing.Point(35, 87);
+            this.pbNosotros.Name = "pbNosotros";
+            this.pbNosotros.Size = new System.Drawing.Size(284, 261);
+            this.pbNosotros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbNosotros.TabIndex = 7;
+            this.pbNosotros.TabStop = false;
             // 
-            // label2
+            // dgbNosotros
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(394, 198);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 25);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Franco Scaglione";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(394, 152);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 25);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Carlos Pinto";
-            // 
-            // imgNosotros
-            // 
-            this.imgNosotros.Location = new System.Drawing.Point(74, 87);
-            this.imgNosotros.Name = "imgNosotros";
-            this.imgNosotros.Size = new System.Drawing.Size(284, 261);
-            this.imgNosotros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgNosotros.TabIndex = 7;
-            this.imgNosotros.TabStop = false;
-            this.imgNosotros.Click += new System.EventHandler(this.imgNosotros_Click);
+            this.dgbNosotros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbNosotros.Location = new System.Drawing.Point(344, 87);
+            this.dgbNosotros.Name = "dgbNosotros";
+            this.dgbNosotros.Size = new System.Drawing.Size(743, 261);
+            this.dgbNosotros.TabIndex = 8;
+            this.dgbNosotros.SelectionChanged += new System.EventHandler(this.dgbNosotros_SelectionChanged);
             // 
             // Nosotros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.imgNosotros);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1115, 450);
+            this.Controls.Add(this.dgbNosotros);
+            this.Controls.Add(this.pbNosotros);
             this.Controls.Add(this.menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Nosotros";
@@ -131,7 +107,8 @@
             this.Load += new System.EventHandler(this.Nosotros_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgNosotros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNosotros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbNosotros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,9 +120,7 @@
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nosotrosToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox imgNosotros;
+        private System.Windows.Forms.PictureBox pbNosotros;
+        private System.Windows.Forms.DataGridView dgbNosotros;
     }
 }

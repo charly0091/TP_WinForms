@@ -1,4 +1,5 @@
 ﻿using dominio;
+using negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,31 @@ namespace WindowsFormsApp
 {
     public partial class Nosotros : Form
     {
+        private List<Integrante> listaNosotros;
         public Nosotros()
         {
             InitializeComponent();
+        }
+        private void Nosotros_Load(object sender, EventArgs e)
+        {
+            IntegranteNegocio negocio = new IntegranteNegocio();
+            listaNosotros = negocio.Listar();
+            dgbNosotros.DataSource = listaNosotros;
+            dgbNosotros.Columns["Avatar"].Visible = false;
+            cargarImagen(listaNosotros[0].Avatar);
+
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbNosotros.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                pbNosotros.Load("https://user-images.githubusercontent.com/43302778/106805462-7a908400-6645-11eb-958f-cd72b74a17b3.jpg");
+            }
         }
 
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -30,26 +53,10 @@ namespace WindowsFormsApp
             productos.ShowDialog();
         }
 
-        private void Nosotros_Load(object sender, EventArgs e)
+        private void dgbNosotros_SelectionChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void imgNosotros_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                imgNosotros.Load("https://retaildesignblog.net/wp-content/uploads/2018/11/7R9A5223-780x520.jpg");
-            }
-            catch (Exception ex)
-            {
-                imgNosotros.Load("https://user-images.githubusercontent.com/43302778/106805462-7a908400-6645-11eb-958f-cd72b74a17b3.jpg");
-            }
+            Integrante seleccionado = (Integrante)dgbNosotros.CurrentRow.DataBoundItem;
+            cargarImagen(seleccionado.Avatar);
         }
     }
 }
