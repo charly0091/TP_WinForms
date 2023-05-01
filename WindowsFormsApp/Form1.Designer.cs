@@ -41,6 +41,10 @@
             // 
             // dgbArt
             // 
+            this.dgbArt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgbArt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgbArt.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgbArt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgbArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgbArt.Location = new System.Drawing.Point(328, 100);
             this.dgbArt.Margin = new System.Windows.Forms.Padding(2);
@@ -53,9 +57,11 @@
             // 
             // pbArt
             // 
+            this.pbArt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbArt.Location = new System.Drawing.Point(27, 100);
             this.pbArt.Name = "pbArt";
             this.pbArt.Size = new System.Drawing.Size(285, 266);
+            this.pbArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbArt.TabIndex = 1;
             this.pbArt.TabStop = false;
             // 
@@ -96,6 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(932, 476);
             this.Controls.Add(this.pbArt);
             this.Controls.Add(this.dgbArt);

@@ -24,6 +24,7 @@ namespace WindowsFormsApp
             IntegranteNegocio negocio = new IntegranteNegocio();
             listaNosotros = negocio.Listar();
             dgbNosotros.DataSource = listaNosotros;
+            dgbNosotros.Columns["Id"].Visible = false;
             dgbNosotros.Columns["Avatar"].Visible = false;
             cargarImagen(listaNosotros[0].Avatar);
 
