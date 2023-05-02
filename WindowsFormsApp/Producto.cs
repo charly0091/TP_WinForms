@@ -91,5 +91,11 @@ namespace WindowsFormsApp
             Detalle verDetalle = new Detalle(seleccionado);
             verDetalle.ShowDialog();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Agregar alta = new Agregar();
+            alta.ShowDialog();
+        }
     }
 }
