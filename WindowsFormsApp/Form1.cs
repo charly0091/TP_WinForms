@@ -82,5 +82,14 @@ namespace WindowsFormsApp
         {
 
         }
+
+        private void btnVerDetalle_Click_1(object sender, EventArgs e)
+        {
+            Articulo seleccionado = new Articulo();
+            seleccionado = (Articulo)dgbArt.CurrentRow.DataBoundItem;
+
+            Detalle verDetalle = new Detalle(seleccionado);
+            verDetalle.ShowDialog();
+        }
     }
 }
