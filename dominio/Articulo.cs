@@ -16,14 +16,5 @@ namespace dominio
         public Categoria Categoria { get; set; }
         public Imagen Imagen { get; set; }
         public decimal Precio { get; set; }
-        public String getMarca()
-        {
-            return Marca.Descripcion;
-        }
-
-        public String getCategoria()
-        {
-            return Categoria.Descripcion;
-        }
     }
 }
