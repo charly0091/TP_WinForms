@@ -21,7 +21,18 @@ namespace WindowsFormsApp
 
         private void Agregar_Load(object sender, EventArgs e)
         {
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
 
+            try
+            {
+                cbMarca.DataSource = marcaNegocio.listar();
+                cbCategoria.DataSource = categoriaNegocio.listar();
+            }
+            catch (Exception ex)
+            {   
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -40,6 +51,8 @@ namespace WindowsFormsApp
                 articulo.Nombre = tbNombre.Text;
                 articulo.Descripcion = tbDescripcion.Text;
                 articulo.Precio=decimal.Parse(tbPrecio.Text);
+                articulo.Marca = (Marca)cbMarca.SelectedItem;
+                articulo.Categoria = (Categoria)cbCategoria.SelectedItem;
 
                 articuloNegocio.agregar(articulo);
                 MessageBox.Show("Se ha agregado correctamente");
@@ -47,7 +60,8 @@ namespace WindowsFormsApp
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.ToString());            }
+                MessageBox.Show(ex.ToString());           
+            }
         }
     }
 }

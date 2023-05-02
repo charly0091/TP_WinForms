@@ -15,7 +15,5 @@ namespace dominio
         {
             return Descripcion;
         }
-
-
     }
 }
