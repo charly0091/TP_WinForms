@@ -42,5 +42,14 @@ namespace WindowsFormsApp
             cargar();
         }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Categoria seleccionado;
+            seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+
+            frmAltaCategoria modificar = new frmAltaCategoria(seleccionado);
+            modificar.ShowDialog();
+            cargar();
+        }
     }
 }

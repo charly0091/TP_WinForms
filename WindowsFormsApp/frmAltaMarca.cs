@@ -14,9 +14,18 @@ namespace WindowsFormsApp
 {
     public partial class frmAltaMarca : Form
     {
+        private Marca marca = null;
+
         public frmAltaMarca()
         {
             InitializeComponent();
+        }
+
+
+        public frmAltaMarca(Marca marca)
+        {
+            InitializeComponent();
+            this.marca = marca;
         }
 
 
@@ -24,23 +33,47 @@ namespace WindowsFormsApp
         {
             int autoId;
             MarcaNegocio negocio = new MarcaNegocio();
-            autoId = negocio.numeroId();
-            lblAutoId.Text = autoId.ToString();
+
+            if(this.marca != null) 
+            {
+                this.Text = "Modificar Marca";
+                autoId = negocio.numeroIdModificar(marca);
+                lblAutoId.Text = autoId.ToString();
+                txtDescripcion.Text = this.marca.Descripcion;
+            }
+            else
+            {
+                autoId = negocio.numeroId();
+                lblAutoId.Text = autoId.ToString();
+            }
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Marca marc = new Marca();
+
             MarcaNegocio negocio = new MarcaNegocio();
 
             try
             {
-                marc.Id = negocio.numeroId();
-                marc.Descripcion = txtDescripcion.Text;
+                if(marca == null) 
+                {
+                    marca = new Marca();
+                }
 
-                negocio.agregar(marc);
-                MessageBox.Show("Agregado Correctamente");
-                Close();
+                marca.Id = negocio.numeroIdModificar(this.marca);
+                marca.Descripcion = txtDescripcion.Text;
+
+                if (marca.Id != 0)
+                {
+                    negocio.modificar(marca);
+                    MessageBox.Show("Modificado Correctamente");
+                }
+                else
+                {
+                    negocio.agregar(marca);
+                    MessageBox.Show("Agregado Correctamente");
+                }
+                    Close();
             }
             catch (Exception)
             {

@@ -15,12 +15,22 @@ namespace WindowsFormsApp
 {
     public partial class frmAltaCategoria : Form
     {
-        
+        private Categoria categoria = null;
 
         public frmAltaCategoria()
         {
             InitializeComponent();
         }
+
+
+
+        public frmAltaCategoria(Categoria categoria)
+        {
+            InitializeComponent();
+            this.categoria = categoria;
+        }
+
+
 
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -32,23 +42,48 @@ namespace WindowsFormsApp
         {
             int autoId;
             CategoriaNegocio negocio = new CategoriaNegocio();
-            autoId = negocio.numeroId();
-            lblAutoId.Text = autoId.ToString();
+
+
+            if (this.categoria != null)
+            {
+                this.Text = "Modificar Categoria";
+                autoId = negocio.numeroIdModificar(categoria);
+                lblAutoId.Text = autoId.ToString();
+                txtDescripcion.Text = this.categoria.Descripcion;
+            }
+            else 
+            {
+                autoId = negocio.numeroId();
+                lblAutoId.Text = autoId.ToString();
+            }
         }
 
 
         private void btnAceptar_Click(object sender, EventArgs e)
-        {
-            Categoria categ = new Categoria();
+        { 
             CategoriaNegocio negocio = new CategoriaNegocio();
 
             try
             {
-                categ.Id = negocio.numeroId();
-                categ.Descripcion = txtDescripcion.Text;
+                if(categoria == null) 
+                {
+                    categoria = new Categoria();
+                }
 
-                negocio.agregar(categ);
-                MessageBox.Show("Agregado Correctamente");
+               categoria.Id = negocio.numeroIdModificar(this.categoria);
+               categoria.Descripcion = txtDescripcion.Text;
+
+                if(categoria.Id != 0)
+                {
+                    negocio.modificar(categoria);
+                    MessageBox.Show("Modificado Correctamente");
+                }
+                else
+                {
+                    negocio.agregar(categoria);
+                    MessageBox.Show("Agregado Correctamente");
+                }
+
                 Close();
             }
             catch (Exception)
@@ -56,6 +91,11 @@ namespace WindowsFormsApp
 
                 throw;
             }
+        }
+
+        private void lblAutoId_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

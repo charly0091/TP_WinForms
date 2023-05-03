@@ -22,6 +22,7 @@ namespace WindowsFormsApp
             InitializeComponent();
         }
 
+
         private void Marcas_Load(object sender, EventArgs e)
         {
             cargar();
@@ -43,6 +44,14 @@ namespace WindowsFormsApp
             dgvMarcas.DataSource = listaMarca;
         }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Marca seleccionado;
+            seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
 
+            frmAltaMarca modificar = new frmAltaMarca(seleccionado);
+            modificar.ShowDialog();
+            cargar();
+        }
     }
 }

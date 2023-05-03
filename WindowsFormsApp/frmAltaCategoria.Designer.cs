@@ -63,6 +63,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(100, 22);
             this.txtDescripcion.TabIndex = 2;
+
             // 
             // btnAceptar
             // 
@@ -95,6 +96,7 @@
             this.lblAutoId.Size = new System.Drawing.Size(59, 16);
             this.lblAutoId.TabIndex = 6;
             this.lblAutoId.Text = "lblAutoId";
+            this.lblAutoId.Click += new System.EventHandler(this.lblAutoId_Click);
             // 
             // frmAltaCategoria
             // 

@@ -71,6 +71,64 @@ namespace negocio
             }
         }
 
+
+        public int numeroIdModificar(Categoria categoria)     //Funcion que devuelve el Id de Categoria que se selecciono  o 0 si no hay ninguna
+        {
+
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                
+                datos.setearConsulta("select Id from CATEGORIAS where Id = "+categoria.Id+"");
+                datos.ejecutarLectura();
+
+                if (datos.Lector.HasRows)   
+                {
+                    datos.Lector.Read();
+                    int id = (int)datos.Lector["Id"];
+                    return id;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+
+        public void modificar(Categoria categoria) 
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try 
+            {
+                datos.setearConsulta("update CATEGORIAS set Descripcion= '"+categoria.Descripcion+"' where id = "+categoria.Id+"");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally 
+            {                
+                datos.cerrarConexion();
+            }
+        }
+
+
+
+
+
+
+
         public void agregar(Categoria nuevo)
         {
             AccesoDatos datos = new AccesoDatos();

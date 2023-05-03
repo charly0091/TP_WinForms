@@ -53,9 +53,9 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAgregar.Location = new System.Drawing.Point(55, 344);
+            this.btnAgregar.Location = new System.Drawing.Point(55, 335);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(99, 25);
+            this.btnAgregar.Size = new System.Drawing.Size(99, 34);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -64,19 +64,20 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnModificar.Location = new System.Drawing.Point(170, 344);
+            this.btnModificar.Location = new System.Drawing.Point(170, 335);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(99, 25);
+            this.btnModificar.Size = new System.Drawing.Size(99, 34);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminar.Location = new System.Drawing.Point(285, 344);
+            this.btnEliminar.Location = new System.Drawing.Point(285, 335);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(94, 25);
+            this.btnEliminar.Size = new System.Drawing.Size(94, 34);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
