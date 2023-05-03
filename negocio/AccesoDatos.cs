@@ -19,7 +19,7 @@ namespace negocio
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
+            conexion = new SqlConnection("server=localhost; database=CATALOGO_P3_DB; integrated security=true");
             comando = new SqlCommand();
         }
 
@@ -28,7 +28,7 @@ namespace negocio
             comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = consulta;
         }
-
+        
         public void ejecutarLectura()
         {
             comando.Connection = conexion;
@@ -42,6 +42,20 @@ namespace negocio
                 throw ex;
             }
         }
+        public int leerIdUltimoCreado()
+        {
+            try
+            {
+                int Id = Convert.ToInt32(comando.ExecuteScalar());
+                return Id;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
 
         public void ejecutarAccion()
         {

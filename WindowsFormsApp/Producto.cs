@@ -108,6 +108,7 @@ namespace WindowsFormsApp
         {
             Articulo seleccionado;
             seleccionado=(Articulo)dgbArt.CurrentRow.DataBoundItem;
+
             Agregar modificar = new Agregar(seleccionado);
             modificar.ShowDialog();
             Cargar();

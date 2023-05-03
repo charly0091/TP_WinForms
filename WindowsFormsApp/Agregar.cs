@@ -90,20 +90,22 @@ namespace WindowsFormsApp
                 articulo.Precio = decimal.Parse(tbPrecio.Text);
                 articulo.Marca = (Marca)cbMarca.SelectedItem;
                 articulo.Categoria = (Categoria)cbCategoria.SelectedItem;
-                imagen.IdArticulo = articulo.Id+1;
-                imagen.ImagenUrl = tbImagen.Text;
+                //imagen.IdArticulo = articulo.Id+1;
+                //imagen.ImagenUrl = tbImagen.Text;
 
                 if (articulo.Id != 0) 
-                { 
-                    articuloNegocio.agregar(articulo);
-                    imagenNegocio.agregar(imagen);
-                    MessageBox.Show("Se ha agregado correctamente");
-                } 
-                else 
                 {
                     articuloNegocio.modificar(articulo);
                     MessageBox.Show("Se ha modificado correctamente");
                     Close();
+                } 
+                else 
+                {
+                    
+                    imagen.IdArticulo = articuloNegocio.agregar(articulo);
+                    imagen.ImagenUrl = tbImagen.Text;
+                    imagenNegocio.agregar(imagen);
+                    MessageBox.Show("Se ha agregado correctamente");
                 }
 
             }

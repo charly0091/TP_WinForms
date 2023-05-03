@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using dominio;
@@ -60,24 +61,66 @@ namespace negocio
             }
         }
 
-        public void agregar(Articulo nuevo)
+        public int agregar(Articulo nuevo)
+            
         {
+            int id = 0;
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("Insert into Articulos(Codigo,Nombre,Descripcion,Precio,IdMarca,IdCategoria)values(" + "'" + nuevo.Codigo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion+ "','" + nuevo.Precio + "',@IdMarca,@IdCategoria)");
+                datos.setearConsulta("Insert into Articulos(Codigo,Nombre,Descripcion,Precio,IdMarca,IdCategoria)values(" + "'" + nuevo.Codigo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion+ "','" + nuevo.Precio + "',@IdMarca,@IdCategoria); SELECT SCOPE_IDENTITY()");
                 datos.setearParametro("@IdMarca",nuevo.Marca.Id);
                 datos.setearParametro("@IdCategoria",nuevo.Categoria.Id);
                 datos.ejecutarAccion();
+
+                id = datos.leerIdUltimoCreado();
+
+
+
+                return id;
+
             }   
             catch (Exception ex)
             {   
-                throw ex;
+                throw;
             }
             finally
             {
                 datos.cerrarConexion();
             }
+            
+        }
+        
+        public int ultimoId()
+        {
+            AccesoDatos datos = new AccesoDatos();
+            int id = 0;
+            try
+            {
+                datos.setearConsulta("SELECT SCOPE_IDENTITY()");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    id = datos.Lector.GetInt32(0);
+                }
+                return id;
+
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
+            finally
+            { 
+                datos.cerrarConexion();
+            }
+
+
+
+
+
+            return id;
         }
 
         public void modificar(Articulo modificado)
