@@ -41,7 +41,7 @@ namespace negocio
         }
 
 
-        public int numeroId()
+        public int numeroId()   //Funcion que muestra el Id de la nueva marca a Agregar
         {
             AccesoDatos datos = new AccesoDatos();
 
@@ -50,7 +50,7 @@ namespace negocio
                 datos.setearConsulta("SELECT TOP 1 id FROM MARCAS ORDER BY Id DESC;");
                 datos.ejecutarLectura();
 
-                if (datos.Lector.HasRows)
+                if (datos.Lector.HasRows)     //Funcion que devuelve booleano -- 1 si la tabla tiene una o mas filas  -- 0 si no tiene filas
                 {
                     datos.Lector.Read();
                     int id = (int)datos.Lector["Id"];
