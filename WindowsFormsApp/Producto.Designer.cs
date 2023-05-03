@@ -50,10 +50,13 @@
             this.dgbArt.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgbArt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgbArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbArt.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgbArt.Location = new System.Drawing.Point(328, 100);
-            this.dgbArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgbArt.Margin = new System.Windows.Forms.Padding(2);
+            this.dgbArt.MultiSelect = false;
             this.dgbArt.Name = "dgbArt";
             this.dgbArt.RowHeadersWidth = 51;
+            this.dgbArt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgbArt.Size = new System.Drawing.Size(565, 267);
             this.dgbArt.TabIndex = 0;
             this.dgbArt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbArt_CellContentClick);
@@ -124,7 +127,7 @@
             // 
             this.btnVerDetalle.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnVerDetalle.Location = new System.Drawing.Point(443, 419);
-            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerDetalle.Name = "btnVerDetalle";
             this.btnVerDetalle.Size = new System.Drawing.Size(90, 28);
             this.btnVerDetalle.TabIndex = 4;
@@ -156,7 +159,7 @@
             this.Controls.Add(this.menu);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menu;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Productos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wardrobe";

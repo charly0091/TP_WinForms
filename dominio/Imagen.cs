@@ -18,6 +18,5 @@ namespace dominio
         {
             return ImagenUrl;
         }
-
     }
 }

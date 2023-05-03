@@ -20,8 +20,9 @@ namespace negocio
 
                 while (datos.Lector.Read())
                 {
-                    
                     Articulo aux = new Articulo();
+                    try
+                    {
                     aux.Id = (int)datos.Lector["Id"];
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
@@ -31,8 +32,16 @@ namespace negocio
                     aux.Categoria = new Categoria();
                     aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
                     aux.Precio = (decimal)datos.Lector["Precio"];
-                    aux.Imagen = new Imagen();
-                    aux.Imagen.ImagenUrl= (string)datos.Lector["ImagenUrl"];
+                        if (!(datos.Lector["ImagenUrl"] is DBNull))
+                    {
+                        aux.Imagen = new Imagen();
+                        aux.Imagen.ImagenUrl= (string)datos.Lector["ImagenUrl"];
+                     }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
 
                     lista.Add(aux);
                 }

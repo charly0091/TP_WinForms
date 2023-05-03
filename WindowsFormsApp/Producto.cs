@@ -23,6 +23,11 @@ namespace WindowsFormsApp
 
         private void Productos_Load(object sender, EventArgs e)
         {
+            Cargar();
+        }
+
+        private void Cargar()
+        {
             ArticuloNegocio negocio = new ArticuloNegocio();
             listaArticulo = negocio.listar();
             dgbArt.DataSource = listaArticulo;
@@ -96,6 +101,7 @@ namespace WindowsFormsApp
         {
             Agregar alta = new Agregar();
             alta.ShowDialog();
+            Cargar();
         }
     }
 }

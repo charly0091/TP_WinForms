@@ -92,8 +92,10 @@
             this.dgbNosotros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgbNosotros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgbNosotros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbNosotros.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgbNosotros.Location = new System.Drawing.Point(332, 395);
             this.dgbNosotros.Name = "dgbNosotros";
+            this.dgbNosotros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgbNosotros.Size = new System.Drawing.Size(300, 100);
             this.dgbNosotros.TabIndex = 8;
             this.dgbNosotros.SelectionChanged += new System.EventHandler(this.dgbNosotros_SelectionChanged);
