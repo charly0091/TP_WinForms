@@ -103,5 +103,14 @@ namespace WindowsFormsApp
             alta.ShowDialog();
             Cargar();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado=(Articulo)dgbArt.CurrentRow.DataBoundItem;
+            Agregar modificar = new Agregar(seleccionado);
+            modificar.ShowDialog();
+            Cargar();
+        }
     }
 }

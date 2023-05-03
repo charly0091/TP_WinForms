@@ -15,9 +15,16 @@ namespace WindowsFormsApp
 {
     public partial class Agregar : Form
     {
+        private Articulo articulo = null;
         public Agregar()
         {
             InitializeComponent();
+        }
+
+        public Agregar(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
         }
 
         private void Agregar_Load(object sender, EventArgs e)
@@ -28,7 +35,24 @@ namespace WindowsFormsApp
             try
             {
                 cbMarca.DataSource = marcaNegocio.listar();
+                cbMarca.ValueMember = "Id";
+                cbMarca.DisplayMember = "Descripcion";
+               
                 cbCategoria.DataSource = categoriaNegocio.listar();
+                cbCategoria.ValueMember = "Id";
+                cbCategoria.DisplayMember = "Descripcion";
+
+                if (articulo!=null)
+                {
+                    tbCodigo.Text = articulo.Codigo;
+                    tbNombre.Text = articulo.Nombre;
+                    tbDescripcion.Text = articulo.Descripcion;
+                    tbPrecio.Text = articulo.Precio.ToString();
+                    tbImagen.Text=articulo.Imagen.ImagenUrl;
+                    cargarImagen(articulo.Imagen.ImagenUrl);
+                    cbMarca.SelectedValue = articulo.Marca.Id;
+                    cbCategoria.SelectedValue= articulo.Categoria.Id;
+                }
             }
             catch (Exception ex)
             {   
