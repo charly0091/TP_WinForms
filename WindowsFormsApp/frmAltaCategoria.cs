@@ -93,10 +93,6 @@ namespace WindowsFormsApp
             }
         }
 
-        private void lblAutoId_Click(object sender, EventArgs e)
-        {
-
-        }
 
     }
 }
