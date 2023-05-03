@@ -10,44 +10,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace WindowsFormsApp
 {
-    public partial class frmAltaCategoria : Form
+    public partial class frmAltaMarca : Form
     {
-        
-
-        public frmAltaCategoria()
+        public frmAltaMarca()
         {
             InitializeComponent();
         }
 
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void frmAltaCategoria_Load(object sender, EventArgs e)
+        private void frmAltaMarca_Load(object sender, EventArgs e)
         {
             int autoId;
-            CategoriaNegocio negocio = new CategoriaNegocio();
+            MarcaNegocio negocio = new MarcaNegocio();
             autoId = negocio.numeroId();
             lblAutoId.Text = autoId.ToString();
         }
 
-
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Categoria categ = new Categoria();
-            CategoriaNegocio negocio = new CategoriaNegocio();
+            Marca marc = new Marca();
+            MarcaNegocio negocio = new MarcaNegocio();
 
             try
             {
-                categ.Id = negocio.numeroId();
-                categ.Descripcion = txtDescripcion.Text;
+                marc.Id = negocio.numeroId();
+                marc.Descripcion = txtDescripcion.Text;
 
-                negocio.agregar(categ);
+                negocio.agregar(marc);
                 MessageBox.Show("Agregado Correctamente");
                 Close();
             }
@@ -55,8 +46,13 @@ namespace WindowsFormsApp
             {
 
                 throw;
+
             }
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -24,9 +24,25 @@ namespace WindowsFormsApp
 
         private void Marcas_Load(object sender, EventArgs e)
         {
+            cargar();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaMarca alta = new frmAltaMarca();
+            alta.ShowDialog();
+            cargar();
+
+        }
+
+
+        private void cargar() 
+        {
             MarcaNegocio negocio = new MarcaNegocio();
             listaMarca = negocio.listar();
             dgvMarcas.DataSource = listaMarca;
         }
+
+
     }
 }
