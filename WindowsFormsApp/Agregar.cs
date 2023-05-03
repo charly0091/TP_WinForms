@@ -16,6 +16,8 @@ namespace WindowsFormsApp
     public partial class Agregar : Form
     {
         private Articulo articulo = null;
+        private Imagen imagen = null;
+
         public Agregar()
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
             this.articulo = articulo;
+            Text = "Modificar";
         }
 
         private void Agregar_Load(object sender, EventArgs e)
@@ -67,36 +70,48 @@ namespace WindowsFormsApp
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Articulo articulo = new Articulo();
+            //Articulo articulo = new Articulo();
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
 
-            Imagen imagen = new Imagen();
+            //Imagen imagen = new Imagen();
             ImagenNegocio imagenNegocio = new ImagenNegocio();
 
             try
             {
+                if (articulo == null)
+                {
+                    articulo = new Articulo();
+                    imagen = new Imagen();
+                }
+
                 articulo.Codigo = tbCodigo.Text;
                 articulo.Nombre = tbNombre.Text;
                 articulo.Descripcion = tbDescripcion.Text;
-                articulo.Precio=decimal.Parse(tbPrecio.Text);
+                articulo.Precio = decimal.Parse(tbPrecio.Text);
                 articulo.Marca = (Marca)cbMarca.SelectedItem;
                 articulo.Categoria = (Categoria)cbCategoria.SelectedItem;
-                //¿Como pasarle el idArticulo?
-                imagen.IdArticulo = 70;
-                imagen.ImagenUrl=tbImagen.Text;
+                imagen.IdArticulo = articulo.Id+1;
+                imagen.ImagenUrl = tbImagen.Text;
 
-                articuloNegocio.agregar(articulo);
-                imagenNegocio.agregar(imagen);
+                if (articulo.Id != 0) 
+                { 
+                    articuloNegocio.agregar(articulo);
+                    imagenNegocio.agregar(imagen);
+                    MessageBox.Show("Se ha agregado correctamente");
+                } 
+                else 
+                {
+                    articuloNegocio.modificar(articulo);
+                    MessageBox.Show("Se ha modificado correctamente");
+                    Close();
+                }
 
-                MessageBox.Show("Se ha agregado correctamente");
-                Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());           
+                MessageBox.Show(ex.ToString());
             }
         }
-
 
         private void tbImagen_Leave(object sender, EventArgs e)
         {

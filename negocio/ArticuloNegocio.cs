@@ -34,8 +34,8 @@ namespace negocio
                     aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
                     aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
                     aux.Precio = (decimal)datos.Lector["Precio"];
-                        if (!(datos.Lector["ImagenUrl"] is DBNull))
-                    {
+                     if (!(datos.Lector["ImagenUrl"] is DBNull))
+                     {
                         aux.Imagen = new Imagen();
                         aux.Imagen.ImagenUrl= (string)datos.Lector["ImagenUrl"];
                      }
@@ -72,6 +72,32 @@ namespace negocio
             }   
             catch (Exception ex)
             {   
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void modificar(Articulo modificado)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Update Articulos set Codigo=@Codigo,Nombre=@Nombre,Descripcion=@Descripcion,IdMarca=@IdMarca,IdCategoria=@IdCategoria,Precio=@Precio Where Id =@Id");
+                datos.setearParametro("@Codigo", modificado.Codigo);
+                datos.setearParametro("@Nombre", modificado.Nombre);
+                datos.setearParametro("@Descripcion", modificado.Descripcion);
+                datos.setearParametro("@IdMarca", modificado.Marca.Id);
+                datos.setearParametro("@IdCategoria", modificado.Categoria.Id);
+                datos.setearParametro("@Precio", modificado.Precio);
+                datos.setearParametro("@Id", modificado.Id);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
                 throw ex;
             }
             finally
