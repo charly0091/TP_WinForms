@@ -24,15 +24,26 @@ namespace WindowsFormsApp
 
         private void Categorias_Load(object sender, EventArgs e)
         {
+            cargar();
+        }
+
+        private void cargar() 
+        {
             CategoriaNegocio negocio = new CategoriaNegocio();
             listaCategoria = negocio.listar();
             dgvCategorias.DataSource = listaCategoria;
-
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaCategoria alta = new frmAltaCategoria();
+            alta.ShowDialog();
+            cargar();
         }
     }
 }
