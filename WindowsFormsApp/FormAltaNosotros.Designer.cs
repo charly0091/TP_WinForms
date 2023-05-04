@@ -39,6 +39,7 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblLegajo = new System.Windows.Forms.Label();
+            this.btnAgregarImagen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbIntegrante)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,11 +137,22 @@
             this.lblLegajo.TabIndex = 20;
             this.lblLegajo.Text = "Legajo";
             // 
+            // btnAgregarImagen
+            // 
+            this.btnAgregarImagen.Location = new System.Drawing.Point(311, 439);
+            this.btnAgregarImagen.Name = "btnAgregarImagen";
+            this.btnAgregarImagen.Size = new System.Drawing.Size(27, 23);
+            this.btnAgregarImagen.TabIndex = 30;
+            this.btnAgregarImagen.Text = "+";
+            this.btnAgregarImagen.UseVisualStyleBackColor = true;
+            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
+            // 
             // FormAltaNosotros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 538);
+            this.Controls.Add(this.btnAgregarImagen);
             this.Controls.Add(this.pbIntegrante);
             this.Controls.Add(this.tbAvatar);
             this.Controls.Add(this.lblUrl);
@@ -174,5 +186,6 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblLegajo;
+        private System.Windows.Forms.Button btnAgregarImagen;
     }
 }

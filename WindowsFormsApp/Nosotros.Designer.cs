@@ -106,7 +106,7 @@
             this.pbNosotros.Location = new System.Drawing.Point(312, 81);
             this.pbNosotros.Name = "pbNosotros";
             this.pbNosotros.Size = new System.Drawing.Size(350, 350);
-            this.pbNosotros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbNosotros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbNosotros.TabIndex = 7;
             this.pbNosotros.TabStop = false;
             // 
@@ -184,7 +184,6 @@
             // 
             // tbBuscar
             // 
-            this.tbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(100, 23);
             this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
