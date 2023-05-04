@@ -15,7 +15,7 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("Select Id,Legajo,Nombre,Apellido,Avatar from Integrantes");
+                datos.setearConsulta("Select Id,Legajo,Nombre,Apellido,Avatar,Activo from Integrantes where Activo=1");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -30,6 +30,7 @@ namespace negocio
                     {
                         aux.Avatar = (string)datos.Lector["Avatar"];
                     }
+                    aux.Activo = (bool)datos.Lector["Activo"];
 
                     lista.Add(aux);
                 }
@@ -83,6 +84,25 @@ namespace negocio
             catch (Exception ex)
             {
                 throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void eliminarLogico(int idIntegrante)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Update Integrantes set Activo=0 Where Id=@Id");
+                datos.setearParametro("@Id", idIntegrante);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
             finally
             {

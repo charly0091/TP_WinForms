@@ -33,6 +33,7 @@ namespace WindowsFormsApp
                 dgbNosotros.DataSource = listaNosotros;
                 dgbNosotros.Columns["Id"].Visible = false;
                 dgbNosotros.Columns["Avatar"].Visible = false;
+                dgbNosotros.Columns["Activo"].Visible = false;
                 cargarImagen(listaNosotros[0].Avatar);
             }
             catch (Exception ex)
@@ -86,6 +87,26 @@ namespace WindowsFormsApp
             FormAltaNosotros modificar = new FormAltaNosotros(seleccionado);
             modificar.ShowDialog();
             cargar();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            IntegranteNegocio negocio = new IntegranteNegocio();
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Estás seguro que quieres eliminarlo?", "Eliminado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    Integrante seleccionado;
+                    seleccionado = (Integrante)dgbNosotros.CurrentRow.DataBoundItem;
+                    negocio.eliminarLogico(seleccionado.Id);
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btnEliminarFisico_Click(object sender, EventArgs e)
