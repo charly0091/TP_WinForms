@@ -128,5 +128,17 @@ namespace WindowsFormsApp
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Categorias categoria = new Categorias();
+            categoria.ShowDialog();
+        }
+
+        private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Marcas marca = new Marcas();
+            marca.ShowDialog();
+        }
     }
 }

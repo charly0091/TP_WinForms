@@ -32,6 +32,8 @@
             this.menu = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nosotrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pbNosotros = new System.Windows.Forms.PictureBox();
             this.dgbNosotros = new System.Windows.Forms.DataGridView();
@@ -49,6 +51,8 @@
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
             this.productosToolStripMenuItem,
+            this.categoriaToolStripMenuItem,
+            this.marcasToolStripMenuItem,
             this.nosotrosToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
@@ -69,6 +73,20 @@
             this.productosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
+            // 
+            // categoriaToolStripMenuItem
+            // 
+            this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.categoriaToolStripMenuItem.Text = "Categorias";
+            this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
+            // 
+            // marcasToolStripMenuItem
+            // 
+            this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.marcasToolStripMenuItem.Text = "Marcas";
+            this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
             // nosotrosToolStripMenuItem
             // 
@@ -97,19 +115,19 @@
             this.dgbNosotros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgbNosotros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgbNosotros.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgbNosotros.Location = new System.Drawing.Point(332, 395);
+            this.dgbNosotros.Location = new System.Drawing.Point(678, 163);
             this.dgbNosotros.Name = "dgbNosotros";
             this.dgbNosotros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgbNosotros.Size = new System.Drawing.Size(300, 100);
+            this.dgbNosotros.Size = new System.Drawing.Size(349, 100);
             this.dgbNosotros.TabIndex = 8;
             this.dgbNosotros.SelectionChanged += new System.EventHandler(this.dgbNosotros_SelectionChanged);
             // 
             // btnEliminarFisico
             // 
             this.btnEliminarFisico.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminarFisico.Location = new System.Drawing.Point(682, 366);
+            this.btnEliminarFisico.Location = new System.Drawing.Point(943, 269);
             this.btnEliminarFisico.Name = "btnEliminarFisico";
-            this.btnEliminarFisico.Size = new System.Drawing.Size(124, 23);
+            this.btnEliminarFisico.Size = new System.Drawing.Size(84, 23);
             this.btnEliminarFisico.TabIndex = 12;
             this.btnEliminarFisico.Text = "Eliminar Fisico";
             this.btnEliminarFisico.UseVisualStyleBackColor = true;
@@ -118,9 +136,9 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.Location = new System.Drawing.Point(682, 305);
+            this.btnModificar.Location = new System.Drawing.Point(766, 269);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(124, 23);
+            this.btnModificar.Size = new System.Drawing.Size(84, 23);
             this.btnModificar.TabIndex = 11;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -129,9 +147,9 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.Location = new System.Drawing.Point(682, 275);
+            this.btnAgregar.Location = new System.Drawing.Point(678, 269);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(124, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(84, 23);
             this.btnAgregar.TabIndex = 10;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -140,9 +158,9 @@
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminar.Location = new System.Drawing.Point(682, 335);
+            this.btnEliminar.Location = new System.Drawing.Point(855, 269);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(124, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(84, 23);
             this.btnEliminar.TabIndex = 13;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -182,12 +200,14 @@
         private System.Windows.Forms.MenuStrip menu;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nosotrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
         private System.Windows.Forms.PictureBox pbNosotros;
         private System.Windows.Forms.DataGridView dgbNosotros;
         private System.Windows.Forms.Button btnEliminarFisico;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nosotrosToolStripMenuItem;
     }
 }
