@@ -68,8 +68,11 @@ namespace WindowsFormsApp
 
         private void dgbNosotros_SelectionChanged(object sender, EventArgs e)
         {
-            Integrante seleccionado = (Integrante)dgbNosotros.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.Avatar);
+            if(dgbNosotros.CurrentRow!=null)
+            {
+                Integrante seleccionado = (Integrante)dgbNosotros.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.Avatar);
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -139,6 +142,30 @@ namespace WindowsFormsApp
         {
             Marcas marca = new Marcas();
             marca.ShowDialog();
+        }
+
+        private void tbBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+            List<Integrante> listaFiltrada;
+            string filtro = tbBuscar.Text;
+
+            if (filtro != " ")
+            {
+                listaFiltrada = listaNosotros.FindAll(integrante => 
+                integrante.Apellido.ToUpper().Contains(filtro.ToUpper()) ||
+                integrante.Nombre.ToUpper().Contains(filtro.ToUpper()) 
+                );
+                dgbNosotros.DataSource = null;
+                dgbNosotros.DataSource = listaFiltrada;
+                dgbNosotros.Columns["Id"].Visible = false;
+                dgbNosotros.Columns["Avatar"].Visible = false;
+                dgbNosotros.Columns["Activo"].Visible = false;
+            } 
+            else
+            {
+                listaFiltrada = listaNosotros;
+            }
         }
     }
 }

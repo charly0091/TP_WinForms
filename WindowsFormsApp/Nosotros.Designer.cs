@@ -41,9 +41,13 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tbBuscar = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNosotros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgbNosotros)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu
@@ -99,7 +103,7 @@
             this.pbNosotros.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbNosotros.ErrorImage = null;
             this.pbNosotros.InitialImage = null;
-            this.pbNosotros.Location = new System.Drawing.Point(311, 39);
+            this.pbNosotros.Location = new System.Drawing.Point(312, 81);
             this.pbNosotros.Name = "pbNosotros";
             this.pbNosotros.Size = new System.Drawing.Size(350, 350);
             this.pbNosotros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,7 +119,7 @@
             this.dgbNosotros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgbNosotros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgbNosotros.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgbNosotros.Location = new System.Drawing.Point(678, 163);
+            this.dgbNosotros.Location = new System.Drawing.Point(679, 205);
             this.dgbNosotros.Name = "dgbNosotros";
             this.dgbNosotros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgbNosotros.Size = new System.Drawing.Size(349, 100);
@@ -125,7 +129,7 @@
             // btnEliminarFisico
             // 
             this.btnEliminarFisico.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminarFisico.Location = new System.Drawing.Point(943, 269);
+            this.btnEliminarFisico.Location = new System.Drawing.Point(944, 311);
             this.btnEliminarFisico.Name = "btnEliminarFisico";
             this.btnEliminarFisico.Size = new System.Drawing.Size(84, 23);
             this.btnEliminarFisico.TabIndex = 12;
@@ -136,7 +140,7 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.Location = new System.Drawing.Point(766, 269);
+            this.btnModificar.Location = new System.Drawing.Point(767, 311);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(84, 23);
             this.btnModificar.TabIndex = 11;
@@ -147,7 +151,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.Location = new System.Drawing.Point(678, 269);
+            this.btnAgregar.Location = new System.Drawing.Point(679, 311);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(84, 23);
             this.btnAgregar.TabIndex = 10;
@@ -158,13 +162,38 @@
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminar.Location = new System.Drawing.Point(855, 269);
+            this.btnEliminar.Location = new System.Drawing.Point(856, 311);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(84, 23);
             this.btnEliminar.TabIndex = 13;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tbBuscar,
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 24);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuStrip1.Size = new System.Drawing.Size(1115, 27);
+            this.menuStrip1.TabIndex = 14;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // tbBuscar
+            // 
+            this.tbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbBuscar.Name = "tbBuscar";
+            this.tbBuscar.Size = new System.Drawing.Size(100, 23);
+            this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(54, 23);
+            this.toolStripMenuItem1.Text = "Buscar";
             // 
             // Nosotros
             // 
@@ -173,6 +202,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1115, 498);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEliminarFisico);
             this.Controls.Add(this.btnModificar);
@@ -190,6 +220,8 @@
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNosotros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgbNosotros)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +241,8 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nosotrosToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripTextBox tbBuscar;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
