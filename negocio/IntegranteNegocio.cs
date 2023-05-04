@@ -66,6 +66,29 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        public void modificar(Integrante nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Update Integrantes set Legajo=@Legajo,Nombre=@Nombre,Apellido=@Apellido,Avatar=@Avatar Where Id=@Id");
+                datos.setearParametro("@Legajo", nuevo.Legajo);
+                datos.setearParametro("@Nombre", nuevo.Nombre);
+                datos.setearParametro("@Apellido", nuevo.Apellido);
+                datos.setearParametro("@Avatar", nuevo.Avatar);
+                datos.setearParametro("@Id", nuevo.Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }
 

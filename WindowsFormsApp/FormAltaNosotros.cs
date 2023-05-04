@@ -14,29 +14,61 @@ namespace WindowsFormsApp
 {
     public partial class FormAltaNosotros : Form
     {
+        private Integrante integrante = null;
         public FormAltaNosotros()
         {
             InitializeComponent();
         }
+        public FormAltaNosotros(Integrante modificar)
+        {
+            InitializeComponent();
+            this.integrante = modificar;
+        }
 
         private void FormAltaNosotros_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                if(integrante != null)
+                {
+                    tbLegajo.Text=integrante.Legajo.ToString();
+                    tbNombre.Text= integrante.Nombre;
+                    tbApellido.Text=integrante.Apellido;
+                    tbAvatar.Text=integrante.Avatar;
+                    cargarImagen(integrante.Avatar);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Integrante integrante = new Integrante();
+            //Integrante integrante = new Integrante();
             IntegranteNegocio negocio = new IntegranteNegocio();
             try
             {
+                if(integrante==null)
+                {
+                    integrante = new Integrante();
+                }
                 integrante.Legajo=int.Parse(tbLegajo.Text);
                 integrante.Nombre=tbNombre.Text;
                 integrante.Apellido=tbApellido.Text;
                 integrante.Avatar = tbAvatar.Text;
 
-                negocio.agregar(integrante);
-                MessageBox.Show("El integrante ha sido agregado");
+                if(integrante.Id!=0)
+                {
+                    negocio.modificar(integrante);
+                    MessageBox.Show("El integrante ha sido modificado");
+                } 
+                else
+                {
+                    negocio.agregar(integrante);
+                    MessageBox.Show("El integrante ha sido agregado");
+                }
 
                 Close();
             }

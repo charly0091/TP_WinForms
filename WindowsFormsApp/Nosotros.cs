@@ -80,7 +80,10 @@ namespace WindowsFormsApp
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            FormAltaNosotros modificar = new FormAltaNosotros();
+            Integrante seleccionado;
+            seleccionado=(Integrante)dgbNosotros.CurrentRow.DataBoundItem;
+
+            FormAltaNosotros modificar = new FormAltaNosotros(seleccionado);
             modificar.ShowDialog();
             cargar();
         }
