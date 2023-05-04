@@ -21,13 +21,24 @@ namespace WindowsFormsApp
         }
         private void Nosotros_Load(object sender, EventArgs e)
         {
-            IntegranteNegocio negocio = new IntegranteNegocio();
-            listaNosotros = negocio.Listar();
-            dgbNosotros.DataSource = listaNosotros;
-            dgbNosotros.Columns["Id"].Visible = false;
-            dgbNosotros.Columns["Avatar"].Visible = false;
-            cargarImagen(listaNosotros[0].Avatar);
+            cargar();
+        }
 
+        private void cargar()
+        {
+            try
+            {
+                IntegranteNegocio negocio = new IntegranteNegocio();
+                listaNosotros = negocio.Listar();
+                dgbNosotros.DataSource = listaNosotros;
+                dgbNosotros.Columns["Id"].Visible = false;
+                dgbNosotros.Columns["Avatar"].Visible = false;
+                cargarImagen(listaNosotros[0].Avatar);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void cargarImagen(string imagen)
@@ -58,6 +69,20 @@ namespace WindowsFormsApp
         {
             Integrante seleccionado = (Integrante)dgbNosotros.CurrentRow.DataBoundItem;
             cargarImagen(seleccionado.Avatar);
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            FormAltaNosotros alta = new FormAltaNosotros();
+            alta.ShowDialog();
+            cargar();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            FormAltaNosotros modificar = new FormAltaNosotros();
+            modificar.ShowDialog();
+            cargar();
         }
     }
 }

@@ -65,6 +65,12 @@
     <Compile Include="Detalle.Designer.cs">
       <DependentUpon>Detalle.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAltaNosotros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAltaNosotros.Designer.cs">
+      <DependentUpon>FormAltaNosotros.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAltaCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Detalle.resx">
       <DependentUpon>Detalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAltaNosotros.resx">
+      <DependentUpon>FormAltaNosotros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAltaCategoria.resx">
       <DependentUpon>frmAltaCategoria.cs</DependentUpon>

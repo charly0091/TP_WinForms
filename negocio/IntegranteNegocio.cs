@@ -26,12 +26,36 @@ namespace negocio
                     aux.Legajo = (int)datos.Lector["Legajo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Apellido = (string)datos.Lector["Apellido"];
-                    aux.Avatar = (string)datos.Lector["Avatar"];
+                    if (!(datos.Lector["Avatar"]is DBNull))
+                    {
+                        aux.Avatar = (string)datos.Lector["Avatar"];
+                    }
 
                     lista.Add(aux);
                 }
-
                 return lista;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void agregar(Integrante nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Insert into Integrantes(Legajo,Nombre,Apellido,Avatar)Values(@Legajo,@Nombre,@Apellido,@Avatar)");
+                datos.setearParametro("@Legajo", nuevo.Legajo);
+                datos.setearParametro("@Nombre", nuevo.Nombre);
+                datos.setearParametro("@Apellido", nuevo.Apellido);
+                datos.setearParametro("@Avatar", nuevo.Avatar);
+                datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
