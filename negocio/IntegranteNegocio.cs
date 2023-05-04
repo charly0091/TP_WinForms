@@ -45,16 +45,16 @@ namespace negocio
             }
         }
 
-        public void agregar(Integrante nuevo)
+        public void agregar(Integrante integrante)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.setearConsulta("Insert into Integrantes(Legajo,Nombre,Apellido,Avatar)Values(@Legajo,@Nombre,@Apellido,@Avatar)");
-                datos.setearParametro("@Legajo", nuevo.Legajo);
-                datos.setearParametro("@Nombre", nuevo.Nombre);
-                datos.setearParametro("@Apellido", nuevo.Apellido);
-                datos.setearParametro("@Avatar", nuevo.Avatar);
+                datos.setearParametro("@Legajo", integrante.Legajo);
+                datos.setearParametro("@Nombre", integrante.Nombre);
+                datos.setearParametro("@Apellido", integrante.Apellido);
+                datos.setearParametro("@Avatar", integrante.Avatar);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -67,22 +67,41 @@ namespace negocio
             }
         }
 
-        public void modificar(Integrante nuevo)
+        public void modificar(Integrante integrante)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.setearConsulta("Update Integrantes set Legajo=@Legajo,Nombre=@Nombre,Apellido=@Apellido,Avatar=@Avatar Where Id=@Id");
-                datos.setearParametro("@Legajo", nuevo.Legajo);
-                datos.setearParametro("@Nombre", nuevo.Nombre);
-                datos.setearParametro("@Apellido", nuevo.Apellido);
-                datos.setearParametro("@Avatar", nuevo.Avatar);
-                datos.setearParametro("@Id", nuevo.Id);
+                datos.setearParametro("@Legajo", integrante.Legajo);
+                datos.setearParametro("@Nombre", integrante.Nombre);
+                datos.setearParametro("@Apellido", integrante.Apellido);
+                datos.setearParametro("@Avatar", integrante.Avatar);
+                datos.setearParametro("@Id", integrante.Id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
                 throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void eliminarFisico(int idIntegrante)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Delete Integrantes Where Id=@Id");
+                datos.setearParametro("@Id", idIntegrante);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
             finally
             {

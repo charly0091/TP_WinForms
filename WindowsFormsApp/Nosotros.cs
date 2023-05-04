@@ -87,5 +87,25 @@ namespace WindowsFormsApp
             modificar.ShowDialog();
             cargar();
         }
+
+        private void btnEliminarFisico_Click(object sender, EventArgs e)
+        {
+            IntegranteNegocio negocio = new IntegranteNegocio();
+            try
+            {
+                DialogResult respuesta=MessageBox.Show("¿Estás seguro que quieres eliminarlo?","Eliminado",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                if(respuesta == DialogResult.Yes)
+                {
+                    Integrante seleccionado;
+                    seleccionado = (Integrante)dgbNosotros.CurrentRow.DataBoundItem;
+                    negocio.eliminarFisico(seleccionado.Id);
+                    cargar();
+                } 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
