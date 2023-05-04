@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -112,6 +113,54 @@ namespace WindowsFormsApp
             Agregar modificar = new Agregar(seleccionado);
             modificar.ShowDialog();
             Cargar();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            eliminar();
+        }
+
+        private void btnEliminarLogico_Click(object sender, EventArgs e)
+        {
+            eliminar(true);
+        }
+
+        private void eliminar(bool logico =  false)
+        {
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            ImagenNegocio imagenNegocio = new ImagenNegocio();
+            Articulo seleccionado;
+
+            try
+            {
+
+                DialogResult respuesta = MessageBox.Show("¿Está seguro de eliminar el artículo?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgbArt.CurrentRow.DataBoundItem;
+                    int id = seleccionado.Id;
+                    int idMarca = seleccionado.Marca.Id;
+
+                    if (logico)
+                    {
+                        articuloNegocio.eliminarLogico(id, idMarca);
+                    }
+                    else
+                    {
+                        imagenNegocio.eliminar(id);
+                        articuloNegocio.eliminar(id);
+                    }
+                        Cargar();
+
+                    
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
     }
 }

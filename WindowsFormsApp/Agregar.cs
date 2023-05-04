@@ -101,11 +101,12 @@ namespace WindowsFormsApp
                 } 
                 else 
                 {
-                    
-                    imagen.IdArticulo = articuloNegocio.agregar(articulo);
+                    int idArt = articuloNegocio.agregar(articulo);
+                    imagen.IdArticulo = idArt;
                     imagen.ImagenUrl = tbImagen.Text;
                     imagenNegocio.agregar(imagen);
                     MessageBox.Show("Se ha agregado correctamente");
+                    Close();
                 }
 
             }

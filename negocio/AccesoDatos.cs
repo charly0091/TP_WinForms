@@ -44,8 +44,10 @@ namespace negocio
         }
         public int leerIdUltimoCreado()
         {
+            comando.Connection = conexion;
             try
             {
+                conexion.Open();
                 int Id = Convert.ToInt32(comando.ExecuteScalar());
                 return Id;
             }
