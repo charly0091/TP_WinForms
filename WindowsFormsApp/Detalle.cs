@@ -37,10 +37,22 @@ namespace WindowsFormsApp
             lblArtMarca.Text = "Marca: " + articulo.Marca.Descripcion;
             lblArtCategoria.Text = "Categoria: " + articulo.Categoria.Descripcion;
             lblArtPrecio.Text = "Precio: $" + articulo.Precio.ToString();
-            pbArt.Load(articulo.Imagen.ImagenUrl);
+            cargarImagen(articulo.Imagen.ImagenUrl);
             lblArtCodigo.Text = "Codigo: " + articulo.Codigo;
             lblArtId.Text = "ID: " + articulo.Id.ToString();
 
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbArt.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                pbArt.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+            }
         }
 
     }
