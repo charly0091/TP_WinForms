@@ -44,74 +44,81 @@ namespace WindowsFormsApp
             // 
             // pbArt
             // 
-            this.pbArt.Location = new System.Drawing.Point(482, 32);
+            this.pbArt.Location = new System.Drawing.Point(405, 32);
             this.pbArt.Name = "pbArt";
-            this.pbArt.Size = new System.Drawing.Size(339, 430);
+            this.pbArt.Size = new System.Drawing.Size(416, 418);
+            this.pbArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbArt.TabIndex = 0;
             this.pbArt.TabStop = false;
             // 
             // lblArtNombre
             // 
             this.lblArtNombre.AutoSize = true;
-            this.lblArtNombre.Location = new System.Drawing.Point(192, 32);
+            this.lblArtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArtNombre.Location = new System.Drawing.Point(171, 32);
             this.lblArtNombre.Name = "lblArtNombre";
-            this.lblArtNombre.Size = new System.Drawing.Size(44, 16);
+            this.lblArtNombre.Size = new System.Drawing.Size(120, 32);
             this.lblArtNombre.TabIndex = 1;
-            this.lblArtNombre.Text = "label1";
+            this.lblArtNombre.Text = "Nombre";
             // 
             // lblArtId
             // 
             this.lblArtId.AutoSize = true;
+            this.lblArtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArtId.Location = new System.Drawing.Point(40, 97);
             this.lblArtId.Name = "lblArtId";
-            this.lblArtId.Size = new System.Drawing.Size(44, 16);
+            this.lblArtId.Size = new System.Drawing.Size(27, 22);
             this.lblArtId.TabIndex = 2;
-            this.lblArtId.Text = "label2";
+            this.lblArtId.Text = "ID";
             // 
             // lblArtCodigo
             // 
             this.lblArtCodigo.AutoSize = true;
+            this.lblArtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArtCodigo.Location = new System.Drawing.Point(40, 147);
             this.lblArtCodigo.Name = "lblArtCodigo";
-            this.lblArtCodigo.Size = new System.Drawing.Size(44, 16);
+            this.lblArtCodigo.Size = new System.Drawing.Size(67, 22);
             this.lblArtCodigo.TabIndex = 3;
-            this.lblArtCodigo.Text = "label3";
+            this.lblArtCodigo.Text = "Codigo";
             // 
             // lblArtDescripcion
             // 
-            this.lblArtDescripcion.AutoSize = true;
-            this.lblArtDescripcion.Location = new System.Drawing.Point(40, 201);
+            this.lblArtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArtDescripcion.Location = new System.Drawing.Point(40, 347);
             this.lblArtDescripcion.Name = "lblArtDescripcion";
-            this.lblArtDescripcion.Size = new System.Drawing.Size(44, 16);
+            this.lblArtDescripcion.Size = new System.Drawing.Size(344, 103);
             this.lblArtDescripcion.TabIndex = 4;
-            this.lblArtDescripcion.Text = "label4";
+            this.lblArtDescripcion.Text = "Descripción";
             // 
             // lblArtMarca
             // 
             this.lblArtMarca.AutoSize = true;
-            this.lblArtMarca.Location = new System.Drawing.Point(40, 249);
+            this.lblArtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArtMarca.Location = new System.Drawing.Point(40, 247);
             this.lblArtMarca.Name = "lblArtMarca";
-            this.lblArtMarca.Size = new System.Drawing.Size(44, 16);
+            this.lblArtMarca.Size = new System.Drawing.Size(59, 22);
             this.lblArtMarca.TabIndex = 5;
-            this.lblArtMarca.Text = "label5";
+            this.lblArtMarca.Text = "Marca";
             // 
             // lblArtCategoria
             // 
             this.lblArtCategoria.AutoSize = true;
-            this.lblArtCategoria.Location = new System.Drawing.Point(40, 301);
+            this.lblArtCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArtCategoria.Location = new System.Drawing.Point(40, 297);
             this.lblArtCategoria.Name = "lblArtCategoria";
-            this.lblArtCategoria.Size = new System.Drawing.Size(96, 16);
+            this.lblArtCategoria.Size = new System.Drawing.Size(88, 22);
             this.lblArtCategoria.TabIndex = 6;
-            this.lblArtCategoria.Text = "lblArtCategoria";
+            this.lblArtCategoria.Text = "Categoria";
             // 
             // lblArtPrecio
             // 
             this.lblArtPrecio.AutoSize = true;
-            this.lblArtPrecio.Location = new System.Drawing.Point(40, 353);
+            this.lblArtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArtPrecio.Location = new System.Drawing.Point(40, 197);
             this.lblArtPrecio.Name = "lblArtPrecio";
-            this.lblArtPrecio.Size = new System.Drawing.Size(44, 16);
+            this.lblArtPrecio.Size = new System.Drawing.Size(61, 22);
             this.lblArtPrecio.TabIndex = 7;
-            this.lblArtPrecio.Text = "label7";
+            this.lblArtPrecio.Text = "Precio";
             // 
             // Detalle
             // 

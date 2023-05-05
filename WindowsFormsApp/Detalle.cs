@@ -33,13 +33,13 @@ namespace WindowsFormsApp
         private void Detalle_Load(object sender, EventArgs e)
         {
             lblArtNombre.Text = articulo.Nombre;
-            lblArtDescripcion.Text = articulo.Descripcion;
-            lblArtMarca.Text = articulo.Marca.Descripcion;
-            lblArtCategoria.Text = articulo.Categoria.Descripcion;
-            lblArtPrecio.Text = articulo.Precio.ToString();
+            lblArtDescripcion.Text = "Descripción: " + articulo.Descripcion;
+            lblArtMarca.Text = "Marca: " + articulo.Marca.Descripcion;
+            lblArtCategoria.Text = "Categoria: " + articulo.Categoria.Descripcion;
+            lblArtPrecio.Text = "Precio: $" + articulo.Precio.ToString();
             pbArt.Load(articulo.Imagen.ImagenUrl);
-            lblArtCodigo.Text = articulo.Codigo;
-            lblArtId.Text = articulo.Id.ToString();
+            lblArtCodigo.Text = "Codigo: " + articulo.Codigo;
+            lblArtId.Text = "ID: " + articulo.Id.ToString();
 
         }
 
