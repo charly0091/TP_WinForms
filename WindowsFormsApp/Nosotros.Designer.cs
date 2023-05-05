@@ -60,7 +60,7 @@
             this.nosotrosToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(1115, 24);
+            this.menu.Size = new System.Drawing.Size(784, 24);
             this.menu.TabIndex = 3;
             this.menu.Text = "menu";
             // 
@@ -103,9 +103,9 @@
             this.pbNosotros.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbNosotros.ErrorImage = null;
             this.pbNosotros.InitialImage = null;
-            this.pbNosotros.Location = new System.Drawing.Point(312, 81);
+            this.pbNosotros.Location = new System.Drawing.Point(87, 150);
             this.pbNosotros.Name = "pbNosotros";
-            this.pbNosotros.Size = new System.Drawing.Size(350, 350);
+            this.pbNosotros.Size = new System.Drawing.Size(250, 250);
             this.pbNosotros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbNosotros.TabIndex = 7;
             this.pbNosotros.TabStop = false;
@@ -119,17 +119,17 @@
             this.dgbNosotros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgbNosotros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgbNosotros.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgbNosotros.Location = new System.Drawing.Point(679, 205);
+            this.dgbNosotros.Location = new System.Drawing.Point(355, 150);
             this.dgbNosotros.Name = "dgbNosotros";
             this.dgbNosotros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgbNosotros.Size = new System.Drawing.Size(349, 100);
+            this.dgbNosotros.Size = new System.Drawing.Size(349, 246);
             this.dgbNosotros.TabIndex = 8;
             this.dgbNosotros.SelectionChanged += new System.EventHandler(this.dgbNosotros_SelectionChanged);
             // 
             // btnEliminarFisico
             // 
             this.btnEliminarFisico.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminarFisico.Location = new System.Drawing.Point(944, 311);
+            this.btnEliminarFisico.Location = new System.Drawing.Point(620, 402);
             this.btnEliminarFisico.Name = "btnEliminarFisico";
             this.btnEliminarFisico.Size = new System.Drawing.Size(84, 23);
             this.btnEliminarFisico.TabIndex = 12;
@@ -140,7 +140,7 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.Location = new System.Drawing.Point(767, 311);
+            this.btnModificar.Location = new System.Drawing.Point(443, 402);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(84, 23);
             this.btnModificar.TabIndex = 11;
@@ -151,7 +151,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.Location = new System.Drawing.Point(679, 311);
+            this.btnAgregar.Location = new System.Drawing.Point(355, 402);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(84, 23);
             this.btnAgregar.TabIndex = 10;
@@ -162,7 +162,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminar.Location = new System.Drawing.Point(856, 311);
+            this.btnEliminar.Location = new System.Drawing.Point(532, 402);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(84, 23);
             this.btnEliminar.TabIndex = 13;
@@ -178,12 +178,13 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip1.Size = new System.Drawing.Size(1115, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 27);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // tbBuscar
             // 
+            this.tbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(100, 23);
             this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
@@ -200,7 +201,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1115, 498);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEliminarFisico);
@@ -213,7 +214,6 @@
             this.Name = "Nosotros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wardrobe";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Nosotros_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();

@@ -34,7 +34,7 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nosotroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nosotrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnVerDetalle = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -58,13 +58,13 @@
             this.dgbArt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgbArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgbArt.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgbArt.Location = new System.Drawing.Point(328, 100);
-            this.dgbArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgbArt.Location = new System.Drawing.Point(267, 145);
+            this.dgbArt.Margin = new System.Windows.Forms.Padding(2);
             this.dgbArt.MultiSelect = false;
             this.dgbArt.Name = "dgbArt";
             this.dgbArt.RowHeadersWidth = 51;
             this.dgbArt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgbArt.Size = new System.Drawing.Size(565, 267);
+            this.dgbArt.Size = new System.Drawing.Size(506, 250);
             this.dgbArt.TabIndex = 0;
             this.dgbArt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbArt_CellContentClick);
             this.dgbArt.SelectionChanged += new System.EventHandler(this.dgbArt_SelectionChanged);
@@ -72,9 +72,9 @@
             // pbArt
             // 
             this.pbArt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbArt.Location = new System.Drawing.Point(27, 100);
+            this.pbArt.Location = new System.Drawing.Point(12, 145);
             this.pbArt.Name = "pbArt";
-            this.pbArt.Size = new System.Drawing.Size(285, 266);
+            this.pbArt.Size = new System.Drawing.Size(250, 250);
             this.pbArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbArt.TabIndex = 1;
             this.pbArt.TabStop = false;
@@ -86,12 +86,12 @@
             this.homeToolStripMenuItem,
             this.productosToolStripMenuItem,
             this.categoriasToolStripMenuItem,
-            this.nosotroToolStripMenuItem,
+            this.marcasToolStripMenuItem,
             this.nosotrosToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menu.Size = new System.Drawing.Size(932, 24);
+            this.menu.Size = new System.Drawing.Size(784, 24);
             this.menu.TabIndex = 2;
             this.menu.Text = "menu";
             this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_ItemClicked);
@@ -116,12 +116,12 @@
             this.categoriasToolStripMenuItem.Text = "Categorias";
             this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_click);
             // 
-            // nosotroToolStripMenuItem
+            // marcasToolStripMenuItem
             // 
-            this.nosotroToolStripMenuItem.Name = "nosotroToolStripMenuItem";
-            this.nosotroToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.nosotroToolStripMenuItem.Text = "Marcas";
-            this.nosotroToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
+            this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.marcasToolStripMenuItem.Text = "Marcas";
+            this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
             // nosotrosToolStripMenuItem
             // 
@@ -133,10 +133,10 @@
             // btnVerDetalle
             // 
             this.btnVerDetalle.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnVerDetalle.Location = new System.Drawing.Point(443, 419);
-            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerDetalle.Location = new System.Drawing.Point(267, 399);
+            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerDetalle.Name = "btnVerDetalle";
-            this.btnVerDetalle.Size = new System.Drawing.Size(90, 28);
+            this.btnVerDetalle.Size = new System.Drawing.Size(82, 23);
             this.btnVerDetalle.TabIndex = 4;
             this.btnVerDetalle.Text = "Ver detalle";
             this.btnVerDetalle.UseVisualStyleBackColor = true;
@@ -145,7 +145,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.Location = new System.Drawing.Point(328, 378);
+            this.btnAgregar.Location = new System.Drawing.Point(354, 399);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 6;
@@ -156,7 +156,7 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.Location = new System.Drawing.Point(409, 378);
+            this.btnModificar.Location = new System.Drawing.Point(435, 399);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 8;
@@ -167,7 +167,7 @@
             // btnEliminarFisico
             // 
             this.btnEliminarFisico.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminarFisico.Location = new System.Drawing.Point(490, 378);
+            this.btnEliminarFisico.Location = new System.Drawing.Point(516, 399);
             this.btnEliminarFisico.Name = "btnEliminarFisico";
             this.btnEliminarFisico.Size = new System.Drawing.Size(83, 23);
             this.btnEliminarFisico.TabIndex = 9;
@@ -178,7 +178,7 @@
             // btnEliminarLogico
             // 
             this.btnEliminarLogico.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminarLogico.Location = new System.Drawing.Point(579, 378);
+            this.btnEliminarLogico.Location = new System.Drawing.Point(605, 399);
             this.btnEliminarLogico.Name = "btnEliminarLogico";
             this.btnEliminarLogico.Size = new System.Drawing.Size(82, 23);
             this.btnEliminarLogico.TabIndex = 11;
@@ -194,7 +194,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip1.Size = new System.Drawing.Size(932, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 27);
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -215,7 +215,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(932, 476);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnEliminarLogico);
             this.Controls.Add(this.btnEliminarFisico);
@@ -227,11 +227,10 @@
             this.Controls.Add(this.menu);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menu;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Productos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wardrobe";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Productos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgbArt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArt)).EndInit();
@@ -252,7 +251,7 @@
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nosotroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nosotrosToolStripMenuItem;
         private System.Windows.Forms.Button btnVerDetalle;
         private System.Windows.Forms.Button btnAgregar;
