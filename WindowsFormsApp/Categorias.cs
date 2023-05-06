@@ -37,7 +37,7 @@ namespace WindowsFormsApp
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAltaCategoria alta = new frmAltaCategoria();
+            AltaCategorias alta = new AltaCategorias();
             alta.ShowDialog();
             cargar();
         }
@@ -47,7 +47,7 @@ namespace WindowsFormsApp
             Categoria seleccionado;
             seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
 
-            frmAltaCategoria modificar = new frmAltaCategoria(seleccionado);
+            AltaCategorias modificar = new AltaCategorias(seleccionado);
             modificar.ShowDialog();
             cargar();
         }

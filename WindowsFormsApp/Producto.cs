@@ -110,7 +110,7 @@ namespace WindowsFormsApp
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Agregar alta = new Agregar();
+            AltaProductos alta = new AltaProductos();
             alta.ShowDialog();
             Cargar();
         }
@@ -120,7 +120,7 @@ namespace WindowsFormsApp
             Articulo seleccionado;
             seleccionado=(Articulo)dgbArt.CurrentRow.DataBoundItem;
 
-            Agregar modificar = new Agregar(seleccionado);
+            AltaProductos modificar = new AltaProductos(seleccionado);
             modificar.ShowDialog();
             Cargar();
         }

@@ -48,11 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agregar.cs">
+    <Compile Include="AltaProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Agregar.Designer.cs">
-      <DependentUpon>Agregar.cs</DependentUpon>
+    <Compile Include="AltaProductos.Designer.cs">
+      <DependentUpon>AltaProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Categorias.cs">
       <SubType>Form</SubType>
@@ -66,23 +66,23 @@
     <Compile Include="Detalle.Designer.cs">
       <DependentUpon>Detalle.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAltaNosotros.cs">
+    <Compile Include="AltaNosotros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAltaNosotros.Designer.cs">
-      <DependentUpon>FormAltaNosotros.cs</DependentUpon>
+    <Compile Include="AltaNosotros.Designer.cs">
+      <DependentUpon>AltaNosotros.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAltaCategoria.cs">
+    <Compile Include="AltaCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAltaCategoria.Designer.cs">
-      <DependentUpon>frmAltaCategoria.cs</DependentUpon>
+    <Compile Include="AltaCategorias.Designer.cs">
+      <DependentUpon>AltaCategorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAltaMarca.cs">
+    <Compile Include="AltaMarcas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAltaMarca.Designer.cs">
-      <DependentUpon>frmAltaMarca.cs</DependentUpon>
+    <Compile Include="AltaMarcas.Designer.cs">
+      <DependentUpon>AltaMarcas.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -110,8 +110,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Agregar.resx">
-      <DependentUpon>Agregar.cs</DependentUpon>
+    <EmbeddedResource Include="AltaProductos.resx">
+      <DependentUpon>AltaProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Categorias.resx">
       <DependentUpon>Categorias.cs</DependentUpon>
@@ -119,14 +119,14 @@
     <EmbeddedResource Include="Detalle.resx">
       <DependentUpon>Detalle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAltaNosotros.resx">
-      <DependentUpon>FormAltaNosotros.cs</DependentUpon>
+    <EmbeddedResource Include="AltaNosotros.resx">
+      <DependentUpon>AltaNosotros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAltaCategoria.resx">
-      <DependentUpon>frmAltaCategoria.cs</DependentUpon>
+    <EmbeddedResource Include="AltaCategorias.resx">
+      <DependentUpon>AltaCategorias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAltaMarca.resx">
-      <DependentUpon>frmAltaMarca.cs</DependentUpon>
+    <EmbeddedResource Include="AltaMarcas.resx">
+      <DependentUpon>AltaMarcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

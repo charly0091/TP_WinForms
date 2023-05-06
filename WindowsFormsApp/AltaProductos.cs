@@ -13,17 +13,17 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace WindowsFormsApp
 {
-    public partial class Agregar : Form
+    public partial class AltaProductos : Form
     {
         private Articulo articulo = null;
         private Imagen imagen = null;
 
-        public Agregar()
+        public AltaProductos()
         {
             InitializeComponent();
         }
 
-        public Agregar(Articulo articulo)
+        public AltaProductos(Articulo articulo)
         {
             InitializeComponent();
             this.articulo = articulo;

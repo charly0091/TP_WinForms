@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp
 {
-    partial class FormAltaNosotros
+    partial class AltaNosotros
     {
         /// <summary>
         /// Required designer variable.

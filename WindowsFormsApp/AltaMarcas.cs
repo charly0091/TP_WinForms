@@ -12,17 +12,17 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp
 {
-    public partial class frmAltaMarca : Form
+    public partial class AltaMarcas : Form
     {
         private Marca marca = null;
 
-        public frmAltaMarca()
+        public AltaMarcas()
         {
             InitializeComponent();
         }
 
 
-        public frmAltaMarca(Marca marca)
+        public AltaMarcas(Marca marca)
         {
             InitializeComponent();
             this.marca = marca;

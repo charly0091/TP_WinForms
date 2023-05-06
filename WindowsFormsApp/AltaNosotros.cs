@@ -14,7 +14,7 @@ using System.IO;
 
 namespace WindowsFormsApp
 {
-    public partial class FormAltaNosotros : Form
+    public partial class AltaNosotros : Form
     {
         /*private Integrante integrante = null;
         OpenFileDialog archivo = new OpenFileDialog();
