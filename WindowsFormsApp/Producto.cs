@@ -66,7 +66,7 @@ namespace WindowsFormsApp
             }
             catch (Exception ex) 
             {
-                pbArt.Load("https://user-images.githubusercontent.com/43302778/106805462-7a908400-6645-11eb-958f-cd72b74a17b3.jpg");
+                pbArt.Load("https://www.torninox.com/tnx_website/static/src/img/default.png");
             }
         }
 
@@ -99,14 +99,14 @@ namespace WindowsFormsApp
 
         }
 
-        private void btnVerDetalle_Click_1(object sender, EventArgs e)
+      /*  private void btnVerDetalle_Click_1(object sender, EventArgs e)
         {
             Articulo seleccionado = new Articulo();
             seleccionado = (Articulo)dgbArt.CurrentRow.DataBoundItem;
 
             Detalle verDetalle = new Detalle(seleccionado);
             verDetalle.ShowDialog();
-        }
+        }*/
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -192,6 +192,15 @@ namespace WindowsFormsApp
             {
                 listaFiltrada = listaArticulo;
             }
+        }
+
+        private void pbArt_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = new Articulo();
+            seleccionado = (Articulo)dgbArt.CurrentRow.DataBoundItem;
+
+            Detalle verDetalle = new Detalle(seleccionado);
+            verDetalle.ShowDialog();
         }
     }
 }

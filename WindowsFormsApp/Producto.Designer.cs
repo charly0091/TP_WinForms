@@ -77,6 +77,7 @@
             this.pbArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbArt.TabIndex = 1;
             this.pbArt.TabStop = false;
+            this.pbArt.Click += new System.EventHandler(this.pbArt_Click);
             // 
             // menu
             // 
@@ -124,19 +125,19 @@
             // btnVerDetalle
             // 
             this.btnVerDetalle.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnVerDetalle.Location = new System.Drawing.Point(267, 399);
+            this.btnVerDetalle.Location = new System.Drawing.Point(12, 400);
             this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerDetalle.Name = "btnVerDetalle";
             this.btnVerDetalle.Size = new System.Drawing.Size(82, 23);
             this.btnVerDetalle.TabIndex = 4;
             this.btnVerDetalle.Text = "Ver detalle";
             this.btnVerDetalle.UseVisualStyleBackColor = true;
-            this.btnVerDetalle.Click += new System.EventHandler(this.btnVerDetalle_Click_1);
+            this.btnVerDetalle.Visible = false;
             // 
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.Location = new System.Drawing.Point(354, 399);
+            this.btnAgregar.Location = new System.Drawing.Point(265, 400);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 6;
@@ -147,7 +148,7 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.Location = new System.Drawing.Point(435, 399);
+            this.btnModificar.Location = new System.Drawing.Point(346, 400);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 8;
@@ -158,7 +159,7 @@
             // btnEliminarFisico
             // 
             this.btnEliminarFisico.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminarFisico.Location = new System.Drawing.Point(516, 399);
+            this.btnEliminarFisico.Location = new System.Drawing.Point(427, 400);
             this.btnEliminarFisico.Name = "btnEliminarFisico";
             this.btnEliminarFisico.Size = new System.Drawing.Size(83, 23);
             this.btnEliminarFisico.TabIndex = 9;
@@ -169,7 +170,7 @@
             // btnEliminarLogico
             // 
             this.btnEliminarLogico.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminarLogico.Location = new System.Drawing.Point(605, 399);
+            this.btnEliminarLogico.Location = new System.Drawing.Point(516, 400);
             this.btnEliminarLogico.Name = "btnEliminarLogico";
             this.btnEliminarLogico.Size = new System.Drawing.Size(82, 23);
             this.btnEliminarLogico.TabIndex = 11;
@@ -191,7 +192,6 @@
             // 
             // tbBuscar
             // 
-            this.tbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(100, 23);
             this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
