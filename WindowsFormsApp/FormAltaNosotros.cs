@@ -16,7 +16,7 @@ namespace WindowsFormsApp
 {
     public partial class FormAltaNosotros : Form
     {
-        private Integrante integrante = null;
+        /*private Integrante integrante = null;
         OpenFileDialog archivo = new OpenFileDialog();
         public FormAltaNosotros()
         {
@@ -122,6 +122,6 @@ namespace WindowsFormsApp
             {
                 MessageBox.Show(ex.ToString());
             }
-        }
+        }*/
     }
 }

@@ -58,7 +58,7 @@
             this.tbAvatar.Name = "tbAvatar";
             this.tbAvatar.Size = new System.Drawing.Size(217, 20);
             this.tbAvatar.TabIndex = 3;
-            this.tbAvatar.MouseLeave += new System.EventHandler(this.tbAvatar_MouseLeave);
+            //this.tbAvatar.MouseLeave += new System.EventHandler(this.tbAvatar_MouseLeave);
             // 
             // lblUrl
             // 
@@ -98,7 +98,7 @@
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            //this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -108,7 +108,7 @@
             this.btnAceptar.TabIndex = 4;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            //this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // lblApellido
             // 
@@ -145,7 +145,7 @@
             this.btnAgregarImagen.TabIndex = 30;
             this.btnAgregarImagen.Text = "+";
             this.btnAgregarImagen.UseVisualStyleBackColor = true;
-            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
+            //this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
             // 
             // FormAltaNosotros
             // 
@@ -166,7 +166,7 @@
             this.Controls.Add(this.lblLegajo);
             this.Name = "FormAltaNosotros";
             this.Text = "Agregar";
-            this.Load += new System.EventHandler(this.FormAltaNosotros_Load);
+            //this.Load += new System.EventHandler(this.FormAltaNosotros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbIntegrante)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

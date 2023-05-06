@@ -124,7 +124,7 @@
             this.dgbNosotros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgbNosotros.Size = new System.Drawing.Size(349, 246);
             this.dgbNosotros.TabIndex = 8;
-            this.dgbNosotros.SelectionChanged += new System.EventHandler(this.dgbNosotros_SelectionChanged);
+            //this.dgbNosotros.SelectionChanged += new System.EventHandler(this.dgbNosotros_SelectionChanged);
             // 
             // btnEliminarFisico
             // 
@@ -135,7 +135,7 @@
             this.btnEliminarFisico.TabIndex = 12;
             this.btnEliminarFisico.Text = "Eliminar Fisico";
             this.btnEliminarFisico.UseVisualStyleBackColor = true;
-            this.btnEliminarFisico.Click += new System.EventHandler(this.btnEliminarFisico_Click);
+            //this.btnEliminarFisico.Click += new System.EventHandler(this.btnEliminarFisico_Click);
             // 
             // btnModificar
             // 
@@ -146,7 +146,7 @@
             this.btnModificar.TabIndex = 11;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            //this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnAgregar
             // 
@@ -157,7 +157,7 @@
             this.btnAgregar.TabIndex = 10;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            //this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -168,7 +168,7 @@
             this.btnEliminar.TabIndex = 13;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            //this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // menuStrip1
             // 
@@ -187,7 +187,7 @@
             this.tbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(100, 23);
-            this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
+            //this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
             // 
             // toolStripMenuItem1
             // 
@@ -214,7 +214,7 @@
             this.Name = "Nosotros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wardrobe";
-            this.Load += new System.EventHandler(this.Nosotros_Load);
+            //this.Load += new System.EventHandler(this.Nosotros_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNosotros)).EndInit();

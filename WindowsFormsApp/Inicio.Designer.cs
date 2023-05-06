@@ -34,7 +34,6 @@
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nosotrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbBuscar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,8 +59,7 @@
             this.homeToolStripMenuItem,
             this.productosToolStripMenuItem,
             this.categoriasToolStripMenuItem,
-            this.marcasToolStripMenuItem,
-            this.nosotrosToolStripMenuItem});
+            this.marcasToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -95,13 +93,6 @@
             this.marcasToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.marcasToolStripMenuItem.Text = "Marcas";
             this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
-            // 
-            // nosotrosToolStripMenuItem
-            // 
-            this.nosotrosToolStripMenuItem.Name = "nosotrosToolStripMenuItem";
-            this.nosotrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.nosotrosToolStripMenuItem.Text = "Nosotros";
-            this.nosotrosToolStripMenuItem.Click += new System.EventHandler(this.nosotrosToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -233,7 +224,6 @@
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nosotrosToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripTextBox tbBuscar;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
