@@ -29,12 +29,19 @@ namespace WindowsFormsApp
 
         private void Cargar()
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            listaArticulo = negocio.listar();
-            dgbArt.DataSource = listaArticulo;
-            dgbArt.Columns["Id"].Visible = false;
-            dgbArt.Columns["Imagen"].Visible = false;
-            cargarImagen(listaArticulo[0].Imagen.ImagenUrl);
+            try
+            {
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                listaArticulo = negocio.listar();
+                dgbArt.DataSource = listaArticulo;
+                dgbArt.Columns["Id"].Visible = false;
+                dgbArt.Columns["Imagen"].Visible = false;
+                cargarImagen(listaArticulo[0].Imagen.ImagenUrl);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void dgbArt_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -44,8 +51,11 @@ namespace WindowsFormsApp
 
         private void dgbArt_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo seleccionado = (Articulo)dgbArt.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.Imagen.ImagenUrl);
+            if(dgbArt.CurrentRow!=null)
+            {
+                Articulo seleccionado = (Articulo)dgbArt.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.Imagen.ImagenUrl);
+            }
         }
 
         private void cargarImagen(string imagen)
@@ -151,9 +161,7 @@ namespace WindowsFormsApp
                         imagenNegocio.eliminar(id);
                         articuloNegocio.eliminar(id);
                     }
-                        Cargar();
-
-                    
+                        Cargar(); 
                 }
 
             }
@@ -163,6 +171,27 @@ namespace WindowsFormsApp
             }
         }
 
-        
+        private void tbBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+            List<Articulo> listaFiltrada;
+
+            string filtro = tbBuscar.Text;
+
+            if (filtro != " ")
+            {
+                listaFiltrada = listaArticulo.FindAll(articulo =>
+                articulo.Nombre.ToUpper().Contains(filtro.ToUpper())
+                );
+                dgbArt.DataSource = null;
+                dgbArt.DataSource = listaFiltrada;
+                dgbArt.Columns["Id"].Visible = false;
+                dgbArt.Columns["Imagen"].Visible = false;
+            }
+            else
+            {
+                listaFiltrada = listaArticulo;
+            }
+        }
     }
 }
