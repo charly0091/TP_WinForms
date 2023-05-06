@@ -81,6 +81,7 @@
             // 
             // menu
             // 
+            this.menu.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
@@ -180,6 +181,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tbBuscar,
             this.toolStripMenuItem1});
@@ -192,6 +194,7 @@
             // 
             // tbBuscar
             // 
+            this.tbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(100, 23);
             this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
@@ -217,7 +220,6 @@
             this.Controls.Add(this.pbArt);
             this.Controls.Add(this.dgbArt);
             this.Controls.Add(this.menu);
-            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menu;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Productos";
