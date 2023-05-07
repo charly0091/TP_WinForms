@@ -202,5 +202,11 @@ namespace WindowsFormsApp
             Detalle verDetalle = new Detalle(seleccionado);
             verDetalle.ShowDialog();
         }
+
+        private void nosotrosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            NosotrosEstatico NosotrosEstatico = new NosotrosEstatico();
+            NosotrosEstatico.ShowDialog();
+        }
     }
 }

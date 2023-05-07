@@ -51,6 +51,7 @@
             this.cbCampo = new System.Windows.Forms.ComboBox();
             this.tbFiltro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.nosotrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgbArt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArt)).BeginInit();
             this.menu.SuspendLayout();
@@ -95,7 +96,8 @@
             this.homeToolStripMenuItem,
             this.productosToolStripMenuItem,
             this.categoriasToolStripMenuItem,
-            this.marcasToolStripMenuItem});
+            this.marcasToolStripMenuItem,
+            this.nosotrosToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -283,6 +285,13 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Búsqueda Avanzada:";
             // 
+            // nosotrosToolStripMenuItem
+            // 
+            this.nosotrosToolStripMenuItem.Name = "nosotrosToolStripMenuItem";
+            this.nosotrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.nosotrosToolStripMenuItem.Text = "Nosotros";
+            this.nosotrosToolStripMenuItem.Click += new System.EventHandler(this.nosotrosToolStripMenuItem_Click_1);
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,6 +357,7 @@
         private System.Windows.Forms.ComboBox cbCampo;
         private System.Windows.Forms.TextBox tbFiltro;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem nosotrosToolStripMenuItem;
     }
 }
 
