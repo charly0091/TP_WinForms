@@ -16,8 +16,7 @@ namespace WindowsFormsApp
     {
 
         private List<Categoria> listaCategoria;
-        int eliminados = 0;
-
+        
         public Categorias()
         {
             InitializeComponent();
@@ -66,7 +65,7 @@ namespace WindowsFormsApp
                     seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
                     negocio.eliminar(seleccionado.Id);
                     cargar();
-                    eliminados++;
+                    
 
                 }
             }

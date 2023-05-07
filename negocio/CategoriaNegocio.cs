@@ -42,27 +42,20 @@ namespace negocio
         }
 
 
-
-
-        
-        public int numeroId()   //Funcion que muestra el Id de la nueva categoria a Agregar
+    
+        public int UltimoId()  //Funcion que muestra el Id de la nueva categoria a Agregar
         {
+            int ultimoId = 0;
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta("SELECT TOP 1 id FROM MARCAS ORDER BY Id DESC;");
+                datos.setearConsulta("SELECT IDENT_CURRENT('CATEGORIAS') AS UltimoId");
                 datos.ejecutarLectura();
 
-                if (datos.Lector.HasRows)     //Funcion que devuelve booleano -- 1 si la tabla tiene una o mas filas  -- 0 si no tiene filas
+                if (datos.Lector.Read())
                 {
-                    datos.Lector.Read();
-                    int id = (int)datos.Lector["Id"];
-                    return id + 1;
-                }
-                else
-                {
-                    return 1;
+                    ultimoId = Convert.ToInt32(datos.Lector["UltimoId"]);
                 }
             }
             catch (Exception ex)
@@ -73,7 +66,15 @@ namespace negocio
             {
                 datos.cerrarConexion();
             }
+
+            return ultimoId;
         }
+
+
+
+
+
+
 
 
         public int numeroIdModificar(Categoria categoria)     //Funcion que devuelve el Id de Categoria que se selecciona  o 0 si no hay ninguna
