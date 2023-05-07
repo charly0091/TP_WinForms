@@ -67,7 +67,7 @@
             this.dgbArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgbArt.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgbArt.Location = new System.Drawing.Point(282, 201);
-            this.dgbArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgbArt.Margin = new System.Windows.Forms.Padding(2);
             this.dgbArt.MultiSelect = false;
             this.dgbArt.Name = "dgbArt";
             this.dgbArt.RowHeadersWidth = 51;
@@ -144,7 +144,7 @@
             // 
             this.btnVerDetalle.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnVerDetalle.Location = new System.Drawing.Point(12, 383);
-            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerDetalle.Name = "btnVerDetalle";
             this.btnVerDetalle.Size = new System.Drawing.Size(82, 23);
             this.btnVerDetalle.TabIndex = 4;
@@ -255,7 +255,7 @@
             // 
             this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnBuscar.Location = new System.Drawing.Point(675, 498);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(82, 23);
             this.btnBuscar.TabIndex = 19;
@@ -322,7 +322,9 @@
             this.Controls.Add(this.dgbArt);
             this.Controls.Add(this.menu);
             this.MainMenuStrip = this.menu;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(800, 600);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Productos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wardrobe";

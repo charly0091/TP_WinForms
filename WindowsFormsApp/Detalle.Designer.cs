@@ -45,7 +45,7 @@ namespace WindowsFormsApp
             // pbArt
             // 
             this.pbArt.Location = new System.Drawing.Point(72, 109);
-            this.pbArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbArt.Margin = new System.Windows.Forms.Padding(2);
             this.pbArt.Name = "pbArt";
             this.pbArt.Size = new System.Drawing.Size(312, 340);
             this.pbArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -142,7 +142,9 @@ namespace WindowsFormsApp
             this.Controls.Add(this.lblArtId);
             this.Controls.Add(this.lblArtNombre);
             this.Controls.Add(this.pbArt);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(800, 600);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Detalle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle";

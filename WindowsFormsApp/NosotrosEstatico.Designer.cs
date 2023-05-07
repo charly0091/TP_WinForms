@@ -201,6 +201,8 @@
             this.Controls.Add(this.pbPinto);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menu);
+            this.MaximumSize = new System.Drawing.Size(800, 600);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "NosotrosEstatico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NosotrosEstatico";
