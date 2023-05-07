@@ -82,7 +82,7 @@ namespace negocio
         {
             if (lector != null)
                 lector.Close();
-            conexion.Close();
+                conexion.Close();
         }
 
     }

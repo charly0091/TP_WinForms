@@ -246,16 +246,16 @@ namespace WindowsFormsApp
                 MessageBox.Show("Por favor, seleccione el criterio para filtrar.");
                 return true;
             }
-            if (cbCampo.SelectedItem.ToString() == "Número")
+            if (cbCampo.SelectedItem.ToString() == "Precio")
             {
                 if (string.IsNullOrEmpty(tbFiltro.Text))
                 {
-                    MessageBox.Show("Debes cargar el filtro para numéricos...");
+                    MessageBox.Show("Por favor ingrese un precio para filtrar");
                     return true;
                 }
                 if (!(soloNumeros(tbFiltro.Text)))
                 {
-                    MessageBox.Show("Solo nros para filtrar por un campo numérico...");
+                    MessageBox.Show("Solo ingresar números");
                     return true;
                 }
 
@@ -299,5 +299,6 @@ namespace WindowsFormsApp
             NosotrosEstatico NosotrosEstatico = new NosotrosEstatico();
             NosotrosEstatico.ShowDialog();
         }
+
     }
 }

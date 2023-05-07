@@ -47,8 +47,8 @@ namespace WindowsFormsApp
 
         private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Productos producto = new Productos();
-            producto.ShowDialog();
+            Categorias categoria = new Categorias();
+            categoria.ShowDialog();
         }
 
         private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
