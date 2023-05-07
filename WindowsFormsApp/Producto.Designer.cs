@@ -80,6 +80,7 @@
             // pbArt
             // 
             this.pbArt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbArt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbArt.Location = new System.Drawing.Point(12, 128);
             this.pbArt.Name = "pbArt";
             this.pbArt.Size = new System.Drawing.Size(250, 250);

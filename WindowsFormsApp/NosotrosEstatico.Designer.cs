@@ -128,6 +128,7 @@
             // 
             this.pbPinto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbPinto.BackgroundImage")));
             this.pbPinto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbPinto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbPinto.Location = new System.Drawing.Point(86, 184);
             this.pbPinto.Name = "pbPinto";
             this.pbPinto.Size = new System.Drawing.Size(150, 150);
@@ -139,6 +140,7 @@
             // 
             this.pbScaglione.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbScaglione.BackgroundImage")));
             this.pbScaglione.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbScaglione.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbScaglione.Location = new System.Drawing.Point(305, 184);
             this.pbScaglione.Name = "pbScaglione";
             this.pbScaglione.Size = new System.Drawing.Size(150, 150);
@@ -150,6 +152,7 @@
             // 
             this.pbVisconti.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbVisconti.BackgroundImage")));
             this.pbVisconti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbVisconti.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbVisconti.InitialImage = null;
             this.pbVisconti.Location = new System.Drawing.Point(525, 184);
             this.pbVisconti.Name = "pbVisconti";
