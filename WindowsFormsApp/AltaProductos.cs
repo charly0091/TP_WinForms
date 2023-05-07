@@ -84,6 +84,9 @@ namespace WindowsFormsApp
                     imagen = new Imagen();
                 }
 
+                if (!validarCampos())
+                    return;
+
                 articulo.Codigo = tbCodigo.Text;
                 articulo.Nombre = tbNombre.Text;
                 articulo.Descripcion = tbDescripcion.Text;
@@ -131,5 +134,22 @@ namespace WindowsFormsApp
                 pbArt.Load("https://user-images.githubusercontent.com/43302778/106805462-7a908400-6645-11eb-958f-cd72b74a17b3.jpg");
             }
         }
+
+        private bool validarCampos()
+        {
+            if (tbCodigo.Text == "" || tbNombre.Text == "" || tbDescripcion.Text == "" || tbPrecio.Text == "" || tbImagen.Text == "")
+            {
+                MessageBox.Show("Debe completar todos los campos");
+                return false;
+            }
+            if(!decimal.TryParse(tbPrecio.Text, out decimal precio))
+            {
+                MessageBox.Show("El precio debe ser un numero");
+                return false;
+            }
+            return true;
+        }
+
+
     }
 }
