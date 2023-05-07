@@ -30,7 +30,7 @@ namespace WindowsFormsApp
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAltaMarca alta = new frmAltaMarca();
+            AltaMarcas alta = new AltaMarcas();
             alta.ShowDialog();
             cargar();
 
@@ -49,7 +49,7 @@ namespace WindowsFormsApp
             Marca seleccionado;
             seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
 
-            frmAltaMarca modificar = new frmAltaMarca(seleccionado);
+            AltaMarcas modificar = new AltaMarcas(seleccionado);
             modificar.ShowDialog();
             cargar();
         }

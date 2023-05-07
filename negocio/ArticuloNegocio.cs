@@ -16,7 +16,7 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("Select Articulos.Id,Articulos.Codigo,Articulos.Nombre,Articulos.Descripcion,Articulos.Precio,Marcas.Descripcion as Marca,Categorias.Descripcion as Categoria,Imagenes.ImagenUrl,Articulos.IdMarca,Articulos.IdCategoria From Articulos\r\ninner join Marcas on Marcas.Id = Articulos.IdMarca\r\ninner join Categorias on Categorias.Id = Articulos.IdCategoria\r\ninner join Imagenes on Imagenes.IdArticulo = Articulos.Id");
+                datos.setearConsulta("Select Articulos.Id,Articulos.Codigo,Articulos.Nombre,Articulos.Descripcion,Articulos.Precio,Marcas.Descripcion as Marca,Categorias.Descripcion as Categoria,Imagenes.ImagenUrl,Articulos.IdMarca,Articulos.IdCategoria From Articulos\r\ninner join Marcas on Marcas.Id = Articulos.IdMarca\r\ninner join Categorias on Categorias.Id = Articulos.IdCategoria\r\ninner join Imagenes on Imagenes.IdArticulo = Articulos.Id Where Articulos.idMarca > 0");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -71,7 +71,7 @@ namespace negocio
                 datos.setearConsulta("Insert into Articulos(Codigo,Nombre,Descripcion,Precio,IdMarca,IdCategoria)values(" + "'" + nuevo.Codigo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion+ "','" + nuevo.Precio + "',@IdMarca,@IdCategoria); SELECT SCOPE_IDENTITY()");
                 datos.setearParametro("@IdMarca",nuevo.Marca.Id);
                 datos.setearParametro("@IdCategoria",nuevo.Categoria.Id);
-                datos.ejecutarAccion();
+                //datos.ejecutarAccion();
 
                 id = datos.leerIdUltimoCreado();
 
@@ -91,37 +91,6 @@ namespace negocio
             
         }
         
-        public int ultimoId()
-        {
-            AccesoDatos datos = new AccesoDatos();
-            int id = 0;
-            try
-            {
-                datos.setearConsulta("SELECT SCOPE_IDENTITY()");
-                datos.ejecutarLectura();
-
-                while (datos.Lector.Read())
-                {
-                    id = datos.Lector.GetInt32(0);
-                }
-                return id;
-
-            }
-            catch(Exception ex)
-            {
-                throw;
-            }
-            finally
-            { 
-                datos.cerrarConexion();
-            }
-
-
-
-
-
-            return id;
-        }
 
         public void modificar(Articulo modificado)
         {
@@ -149,5 +118,46 @@ namespace negocio
             }
 
         }
+
+        public void eliminar(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Delete from Articulos Where Id =" + id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
+        public void eliminarLogico(int id,int idMarca)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            idMarca *= -1;
+            try
+            {
+                datos.setearConsulta("Update Articulos set IdMarca=@IdMarca Where Id =" + id);
+                datos.setearParametro("@IdMarca", idMarca);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+        
     }
 }

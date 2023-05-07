@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,12 +29,19 @@ namespace WindowsFormsApp
 
         private void Cargar()
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            listaArticulo = negocio.listar();
-            dgbArt.DataSource = listaArticulo;
-            dgbArt.Columns["Id"].Visible = false;
-            dgbArt.Columns["Imagen"].Visible = false;
-            cargarImagen(listaArticulo[0].Imagen.ImagenUrl);
+            try
+            {
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                listaArticulo = negocio.listar();
+                dgbArt.DataSource = listaArticulo;
+                dgbArt.Columns["Id"].Visible = false;
+                dgbArt.Columns["Imagen"].Visible = false;
+                cargarImagen(listaArticulo[0].Imagen.ImagenUrl);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void dgbArt_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -43,8 +51,11 @@ namespace WindowsFormsApp
 
         private void dgbArt_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo seleccionado = (Articulo)dgbArt.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.Imagen.ImagenUrl);
+            if(dgbArt.CurrentRow!=null)
+            {
+                Articulo seleccionado = (Articulo)dgbArt.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.Imagen.ImagenUrl);
+            }
         }
 
         private void cargarImagen(string imagen)
@@ -55,7 +66,7 @@ namespace WindowsFormsApp
             }
             catch (Exception ex) 
             {
-                pbArt.Load("https://user-images.githubusercontent.com/43302778/106805462-7a908400-6645-11eb-958f-cd72b74a17b3.jpg");
+                pbArt.Load("https://www.torninox.com/tnx_website/static/src/img/default.png");
             }
         }
 
@@ -88,18 +99,18 @@ namespace WindowsFormsApp
 
         }
 
-        private void btnVerDetalle_Click_1(object sender, EventArgs e)
+      /*  private void btnVerDetalle_Click_1(object sender, EventArgs e)
         {
             Articulo seleccionado = new Articulo();
             seleccionado = (Articulo)dgbArt.CurrentRow.DataBoundItem;
 
             Detalle verDetalle = new Detalle(seleccionado);
             verDetalle.ShowDialog();
-        }
+        }*/
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Agregar alta = new Agregar();
+            AltaProductos alta = new AltaProductos();
             alta.ShowDialog();
             Cargar();
         }
@@ -109,9 +120,93 @@ namespace WindowsFormsApp
             Articulo seleccionado;
             seleccionado=(Articulo)dgbArt.CurrentRow.DataBoundItem;
 
-            Agregar modificar = new Agregar(seleccionado);
+            AltaProductos modificar = new AltaProductos(seleccionado);
             modificar.ShowDialog();
             Cargar();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            eliminar();
+        }
+
+        private void btnEliminarLogico_Click(object sender, EventArgs e)
+        {
+            eliminar(true);
+        }
+
+        private void eliminar(bool logico =  false)
+        {
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            ImagenNegocio imagenNegocio = new ImagenNegocio();
+            Articulo seleccionado;
+
+            try
+            {
+
+                DialogResult respuesta = MessageBox.Show("¿Está seguro de eliminar el artículo?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgbArt.CurrentRow.DataBoundItem;
+                    int id = seleccionado.Id;
+                    int idMarca = seleccionado.Marca.Id;
+
+                    if (logico)
+                    {
+                        articuloNegocio.eliminarLogico(id, idMarca);
+                    }
+                    else
+                    {
+                        imagenNegocio.eliminar(id);
+                        articuloNegocio.eliminar(id);
+                    }
+                        Cargar(); 
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        private void tbBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+            List<Articulo> listaFiltrada;
+
+            string filtro = tbBuscar.Text;
+
+            if (filtro != " ")
+            {
+                listaFiltrada = listaArticulo.FindAll(articulo =>
+                articulo.Nombre.ToUpper().Contains(filtro.ToUpper())
+                );
+                dgbArt.DataSource = null;
+                dgbArt.DataSource = listaFiltrada;
+                dgbArt.Columns["Id"].Visible = false;
+                dgbArt.Columns["Imagen"].Visible = false;
+            }
+            else
+            {
+                listaFiltrada = listaArticulo;
+            }
+        }
+
+        private void pbArt_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = new Articulo();
+            seleccionado = (Articulo)dgbArt.CurrentRow.DataBoundItem;
+
+            Detalle verDetalle = new Detalle(seleccionado);
+            verDetalle.ShowDialog();
+        }
+
+        private void nosotrosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            NosotrosEstatico NosotrosEstatico = new NosotrosEstatico();
+            NosotrosEstatico.ShowDialog();
         }
     }
 }

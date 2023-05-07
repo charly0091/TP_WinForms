@@ -13,18 +13,18 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp
 {
-    public partial class frmAltaCategoria : Form
+    public partial class AltaCategorias : Form
     {
         private Categoria categoria = null;
 
-        public frmAltaCategoria()
+        public AltaCategorias()
         {
             InitializeComponent();
         }
 
 
 
-        public frmAltaCategoria(Categoria categoria)
+        public AltaCategorias(Categoria categoria)
         {
             InitializeComponent();
             this.categoria = categoria;

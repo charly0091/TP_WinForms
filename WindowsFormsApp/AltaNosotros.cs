@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using dominio;
 using negocio;
+using System.Configuration;
+using System.IO;
 
 namespace WindowsFormsApp
 {
-    public partial class FormAltaNosotros : Form
+    public partial class AltaNosotros : Form
     {
-        private Integrante integrante = null;
+        /*private Integrante integrante = null;
+        OpenFileDialog archivo = new OpenFileDialog();
         public FormAltaNosotros()
         {
             InitializeComponent();
@@ -70,6 +73,11 @@ namespace WindowsFormsApp
                     MessageBox.Show("El integrante ha sido agregado");
                 }
 
+                if (archivo != null && !(tbAvatar.Text.ToLower().Contains("http")))
+                {
+                    File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images"] + archivo.SafeFileName);
+                }
+
                 Close();
             }
             catch (Exception ex)
@@ -98,5 +106,22 @@ namespace WindowsFormsApp
         {
             cargarImagen(tbAvatar.Text);
         }
+
+        private void btnAgregarImagen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                archivo.Filter = "jpg|*.jpg; |png|*.png";
+                if (archivo.ShowDialog() == DialogResult.OK)
+                {
+                    tbAvatar.Text = archivo.FileName;
+                    cargarImagen(archivo.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }*/
     }
 }
