@@ -124,8 +124,6 @@ namespace negocio
         }
 
 
-
-
         public void agregar(Marca nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -143,6 +141,23 @@ namespace negocio
                 datos.cerrarConexion();
             }
 
+        }
+
+
+        public void eliminar(int id) 
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from MARCAS where Id = " + id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
     }

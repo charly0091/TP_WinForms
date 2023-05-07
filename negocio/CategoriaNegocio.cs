@@ -41,16 +41,20 @@ namespace negocio
             }
         }
 
+
+
+
+        
         public int numeroId()   //Funcion que muestra el Id de la nueva categoria a Agregar
         {
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta("SELECT TOP 1 id FROM CATEGORIAS ORDER BY Id DESC;");
+                datos.setearConsulta("SELECT TOP 1 id FROM MARCAS ORDER BY Id DESC;");
                 datos.ejecutarLectura();
 
-                if (datos.Lector.HasRows)   //Funcion que devuelve booleano -- 1 si la tabla tiene una o mas filas  -- 0 si no tiene filas
+                if (datos.Lector.HasRows)     //Funcion que devuelve booleano -- 1 si la tabla tiene una o mas filas  -- 0 si no tiene filas
                 {
                     datos.Lector.Read();
                     int id = (int)datos.Lector["Id"];
@@ -72,14 +76,14 @@ namespace negocio
         }
 
 
-        public int numeroIdModificar(Categoria categoria)     //Funcion que devuelve el Id de Categoria que se selecciono  o 0 si no hay ninguna
+        public int numeroIdModificar(Categoria categoria)     //Funcion que devuelve el Id de Categoria que se selecciona  o 0 si no hay ninguna
         {
 
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 
-                datos.setearConsulta("select Id from CATEGORIAS where Id = "+categoria.Id+"");
+                datos.setearConsulta("select Id from CATEGORIAS where Id = "+categoria.Id+""); //INSERT INTO CATEGORIAS (DESCRIPCION) VALUES ('');SELECT SCOPE_IDENTITY() AS Id;
                 datos.ejecutarLectura();
 
                 if (datos.Lector.HasRows)   
@@ -124,11 +128,6 @@ namespace negocio
         }
 
 
-
-
-
-
-
         public void agregar(Categoria nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -136,6 +135,8 @@ namespace negocio
             {
                 datos.setearConsulta("insert into CATEGORIAS (Descripcion) Values ('"+nuevo.Descripcion+"')");
                 datos.ejecutarAccion();
+
+
             }
             catch (Exception ex)
             {
@@ -146,6 +147,23 @@ namespace negocio
                 datos.cerrarConexion();
             }
 
+        }
+
+
+        public void eliminar(int id) 
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from CATEGORIAS where Id = "+id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
     }
