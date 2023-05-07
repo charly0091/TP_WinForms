@@ -60,6 +60,12 @@ namespace WindowsFormsApp
                     marca = new Marca();
                 }
 
+                if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
+                {
+                    MessageBox.Show("Por favor, ingrese una descripción válida.");
+                    return;
+                }
+
                 marca.Id = negocio.numeroIdModificar(this.marca);
                 marca.Descripcion = txtDescripcion.Text;
 

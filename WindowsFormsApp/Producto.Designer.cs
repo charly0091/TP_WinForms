@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgbArt = new System.Windows.Forms.DataGridView();
             this.pbArt = new System.Windows.Forms.PictureBox();
             this.menu = new System.Windows.Forms.MenuStrip();
@@ -63,35 +63,35 @@
             // 
             // dgbArt
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgbArt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgbArt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgbArt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgbArt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgbArt.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
             this.dgbArt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgbArt.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgbArt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft YaHei", 8F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgbArt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgbArt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgbArt.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgbArt.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgbArt.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgbArt.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgbArt.EnableHeadersVisualStyles = false;
             this.dgbArt.Location = new System.Drawing.Point(376, 158);
@@ -133,7 +133,7 @@
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menu.Size = new System.Drawing.Size(1043, 30);
+            this.menu.Size = new System.Drawing.Size(1045, 24);
             this.menu.TabIndex = 2;
             this.menu.Text = "menu";
             this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_ItemClicked);
@@ -141,34 +141,34 @@
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // categoriasToolStripMenuItem
             // 
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.categoriasToolStripMenuItem.Text = "Categorias";
             this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_click);
             // 
             // marcasToolStripMenuItem
             // 
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.marcasToolStripMenuItem.Text = "Marcas";
             this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
             // nosotrosToolStripMenuItem
             // 
             this.nosotrosToolStripMenuItem.Name = "nosotrosToolStripMenuItem";
-            this.nosotrosToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.nosotrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.nosotrosToolStripMenuItem.Text = "Nosotros";
             this.nosotrosToolStripMenuItem.Click += new System.EventHandler(this.nosotrosToolStripMenuItem_Click_1);
             // 
@@ -245,11 +245,11 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tbBuscar,
             this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 30);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip1.Size = new System.Drawing.Size(1043, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(1045, 27);
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -257,13 +257,13 @@
             // 
             this.tbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbBuscar.Name = "tbBuscar";
-            this.tbBuscar.Size = new System.Drawing.Size(132, 27);
+            this.tbBuscar.Size = new System.Drawing.Size(132, 23);
             this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(66, 27);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(54, 23);
             this.toolStripMenuItem1.Text = "Buscar";
             // 
             // lblCampo
@@ -273,7 +273,7 @@
             this.lblCampo.Location = new System.Drawing.Point(19, 616);
             this.lblCampo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCampo.Name = "lblCampo";
-            this.lblCampo.Size = new System.Drawing.Size(61, 20);
+            this.lblCampo.Size = new System.Drawing.Size(50, 17);
             this.lblCampo.TabIndex = 16;
             this.lblCampo.Text = "Campo";
             // 
@@ -284,7 +284,7 @@
             this.lblCriterio.Location = new System.Drawing.Point(300, 616);
             this.lblCriterio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCriterio.Name = "lblCriterio";
-            this.lblCriterio.Size = new System.Drawing.Size(64, 20);
+            this.lblCriterio.Size = new System.Drawing.Size(51, 17);
             this.lblCriterio.TabIndex = 17;
             this.lblCriterio.Text = "Criterio";
             // 
@@ -295,7 +295,7 @@
             this.lblFiltro.Location = new System.Drawing.Point(596, 616);
             this.lblFiltro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFiltro.Name = "lblFiltro";
-            this.lblFiltro.Size = new System.Drawing.Size(47, 20);
+            this.lblFiltro.Size = new System.Drawing.Size(37, 17);
             this.lblFiltro.TabIndex = 18;
             this.lblFiltro.Text = "Filtro";
             // 
@@ -320,7 +320,7 @@
             this.cbCriterio.Location = new System.Drawing.Point(378, 612);
             this.cbCriterio.Margin = new System.Windows.Forms.Padding(4);
             this.cbCriterio.Name = "cbCriterio";
-            this.cbCriterio.Size = new System.Drawing.Size(199, 28);
+            this.cbCriterio.Size = new System.Drawing.Size(199, 25);
             this.cbCriterio.TabIndex = 20;
             // 
             // cbCampo
@@ -331,7 +331,7 @@
             this.cbCampo.Location = new System.Drawing.Point(95, 613);
             this.cbCampo.Margin = new System.Windows.Forms.Padding(4);
             this.cbCampo.Name = "cbCampo";
-            this.cbCampo.Size = new System.Drawing.Size(197, 28);
+            this.cbCampo.Size = new System.Drawing.Size(197, 25);
             this.cbCampo.TabIndex = 21;
             this.cbCampo.SelectedIndexChanged += new System.EventHandler(this.cbCampo_SelectedIndexChanged);
             // 
@@ -341,7 +341,7 @@
             this.tbFiltro.Location = new System.Drawing.Point(665, 615);
             this.tbFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.tbFiltro.Name = "tbFiltro";
-            this.tbFiltro.Size = new System.Drawing.Size(193, 27);
+            this.tbFiltro.Size = new System.Drawing.Size(193, 23);
             this.tbFiltro.TabIndex = 22;
             // 
             // label1
@@ -351,7 +351,7 @@
             this.label1.Location = new System.Drawing.Point(29, 578);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 20);
+            this.label1.Size = new System.Drawing.Size(129, 17);
             this.label1.TabIndex = 23;
             this.label1.Text = "Búsqueda Avanzada:";
             // 
@@ -360,7 +360,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1043, 681);
+            this.ClientSize = new System.Drawing.Size(1045, 689);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbFiltro);
             this.Controls.Add(this.cbCampo);
@@ -384,7 +384,7 @@
             this.MinimumSize = new System.Drawing.Size(1061, 728);
             this.Name = "Productos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Wardrobe";
+            this.Text = "Productos";
             this.Load += new System.EventHandler(this.Productos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgbArt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArt)).EndInit();
