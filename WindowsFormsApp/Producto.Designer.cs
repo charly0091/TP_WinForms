@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgbArt = new System.Windows.Forms.DataGridView();
             this.pbArt = new System.Windows.Forms.PictureBox();
             this.menu = new System.Windows.Forms.MenuStrip();
@@ -60,19 +63,46 @@
             // 
             // dgbArt
             // 
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgbArt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgbArt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgbArt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgbArt.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgbArt.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
             this.dgbArt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgbArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbArt.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgbArt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft YaHei", 8F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgbArt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.dgbArt.ColumnHeadersHeight = 29;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgbArt.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgbArt.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgbArt.Location = new System.Drawing.Point(376, 247);
+            this.dgbArt.EnableHeadersVisualStyles = false;
+            this.dgbArt.Location = new System.Drawing.Point(376, 158);
             this.dgbArt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgbArt.MultiSelect = false;
             this.dgbArt.Name = "dgbArt";
+            this.dgbArt.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgbArt.RowHeadersVisible = false;
             this.dgbArt.RowHeadersWidth = 51;
             this.dgbArt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgbArt.Size = new System.Drawing.Size(633, 155);
+            this.dgbArt.Size = new System.Drawing.Size(633, 244);
             this.dgbArt.TabIndex = 0;
             this.dgbArt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbArt_CellContentClick);
             this.dgbArt.SelectionChanged += new System.EventHandler(this.dgbArt_SelectionChanged);
@@ -92,7 +122,7 @@
             // 
             // menu
             // 
-            this.menu.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.menu.BackColor = System.Drawing.Color.Gold;
             this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
@@ -157,10 +187,12 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.btnAgregar.Location = new System.Drawing.Point(376, 437);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(147, 28);
+            this.btnAgregar.Size = new System.Drawing.Size(147, 32);
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -169,10 +201,12 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnModificar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.btnModificar.Location = new System.Drawing.Point(536, 437);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(144, 28);
+            this.btnModificar.Size = new System.Drawing.Size(147, 32);
             this.btnModificar.TabIndex = 8;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -181,10 +215,11 @@
             // btnEliminarFisico
             // 
             this.btnEliminarFisico.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEliminarFisico.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.btnEliminarFisico.Location = new System.Drawing.Point(692, 437);
             this.btnEliminarFisico.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarFisico.Name = "btnEliminarFisico";
-            this.btnEliminarFisico.Size = new System.Drawing.Size(153, 28);
+            this.btnEliminarFisico.Size = new System.Drawing.Size(147, 32);
             this.btnEliminarFisico.TabIndex = 9;
             this.btnEliminarFisico.Text = "Eliminar fisico";
             this.btnEliminarFisico.UseVisualStyleBackColor = true;
@@ -193,10 +228,11 @@
             // btnEliminarLogico
             // 
             this.btnEliminarLogico.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEliminarLogico.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.btnEliminarLogico.Location = new System.Drawing.Point(860, 437);
             this.btnEliminarLogico.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarLogico.Name = "btnEliminarLogico";
-            this.btnEliminarLogico.Size = new System.Drawing.Size(149, 28);
+            this.btnEliminarLogico.Size = new System.Drawing.Size(147, 32);
             this.btnEliminarLogico.TabIndex = 11;
             this.btnEliminarLogico.Text = "Eliminar logico";
             this.btnEliminarLogico.UseVisualStyleBackColor = true;
@@ -204,7 +240,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.menuStrip1.BackColor = System.Drawing.Color.Gold;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tbBuscar,
@@ -311,10 +347,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.label1.Location = new System.Drawing.Point(29, 578);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 16);
+            this.label1.Size = new System.Drawing.Size(157, 20);
             this.label1.TabIndex = 23;
             this.label1.Text = "Búsqueda Avanzada:";
             // 
@@ -322,7 +359,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1043, 681);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbFiltro);
