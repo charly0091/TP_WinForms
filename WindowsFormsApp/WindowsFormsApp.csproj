@@ -90,6 +90,12 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="NosotrosEstatico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NosotrosEstatico.Designer.cs">
+      <DependentUpon>NosotrosEstatico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Producto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NosotrosEstatico.resx">
+      <DependentUpon>NosotrosEstatico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Producto.resx">
       <DependentUpon>Producto.cs</DependentUpon>

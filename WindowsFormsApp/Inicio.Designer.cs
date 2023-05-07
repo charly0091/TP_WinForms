@@ -44,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.nosotrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -60,7 +61,8 @@
             this.homeToolStripMenuItem,
             this.productosToolStripMenuItem,
             this.categoriasToolStripMenuItem,
-            this.marcasToolStripMenuItem});
+            this.marcasToolStripMenuItem,
+            this.nosotrosToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -189,6 +191,13 @@
             this.label3.TabIndex = 22;
             this.label3.Text = "Televisores";
             // 
+            // nosotrosToolStripMenuItem
+            // 
+            this.nosotrosToolStripMenuItem.Name = "nosotrosToolStripMenuItem";
+            this.nosotrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.nosotrosToolStripMenuItem.Text = "Nosotros";
+            this.nosotrosToolStripMenuItem.Click += new System.EventHandler(this.nosotrosToolStripMenuItem_Click_1);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,5 +246,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripMenuItem nosotrosToolStripMenuItem;
     }
 }
