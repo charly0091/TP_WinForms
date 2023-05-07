@@ -16,6 +16,7 @@ namespace WindowsFormsApp
     {
 
         private List<Categoria> listaCategoria;
+        int eliminados = 0;
 
         public Categorias()
         {
@@ -27,7 +28,7 @@ namespace WindowsFormsApp
             cargar();
         }
 
-        private void cargar() 
+        private void cargar()
         {
             CategoriaNegocio negocio = new CategoriaNegocio();
             listaCategoria = negocio.listar();
@@ -51,5 +52,39 @@ namespace WindowsFormsApp
             modificar.ShowDialog();
             cargar();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            Categoria seleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Confirmas la eliminación?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+                    negocio.eliminar(seleccionado.Id);
+                    cargar();
+                    eliminados++;
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void eliminaciones() 
+        {
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            Categoria seleccionado;
+
+
+            seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+        }
+
     }
 }
