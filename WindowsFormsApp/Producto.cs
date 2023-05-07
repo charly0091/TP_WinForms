@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 using dominio;
 using negocio;
@@ -25,6 +26,11 @@ namespace WindowsFormsApp
         private void Productos_Load(object sender, EventArgs e)
         {
             Cargar();
+            cbCampo.Items.Add("Código");
+            cbCampo.Items.Add("Nombre");
+            cbCampo.Items.Add("Marca");
+            cbCampo.Items.Add("Categoria");
+            cbCampo.Items.Add("Precio");
         }
 
         private void Cargar()
@@ -201,6 +207,91 @@ namespace WindowsFormsApp
 
             Detalle verDetalle = new Detalle(seleccionado);
             verDetalle.ShowDialog();
+        }
+
+        private void cbCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string campo = cbCampo.SelectedItem.ToString();
+
+
+            switch (campo)
+            {
+                case "Código":
+                case "Nombre":
+                case "Marca":
+                case "Categoria":
+                    cbCriterio.Items.Clear();
+                    cbCriterio.Items.Add("Comienza con");
+                    cbCriterio.Items.Add("Termina con");
+                    cbCriterio.Items.Add("Contiene");
+                    break;
+                case "Precio":
+                    cbCriterio.Items.Clear();
+                    cbCriterio.Items.Add("A partir de");
+                    cbCriterio.Items.Add("Hasta");
+                    break;
+            }
+            
+        }
+
+        private bool validarFiltro()
+        {
+            if (cbCampo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor, seleccione el campo para filtrar.");
+                return true;
+            }
+            if (cbCriterio.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor, seleccione el criterio para filtrar.");
+                return true;
+            }
+            if (cbCampo.SelectedItem.ToString() == "Número")
+            {
+                if (string.IsNullOrEmpty(tbFiltro.Text))
+                {
+                    MessageBox.Show("Debes cargar el filtro para numéricos...");
+                    return true;
+                }
+                if (!(soloNumeros(tbFiltro.Text)))
+                {
+                    MessageBox.Show("Solo nros para filtrar por un campo numérico...");
+                    return true;
+                }
+
+            }
+
+            return false;
+        }
+
+        private bool soloNumeros(string cadena)
+        {
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                    return false;
+            }
+            return true;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                if (validarFiltro())
+                    return;
+
+                string campo = cbCampo.SelectedItem.ToString();
+                string criterio = cbCriterio.SelectedItem.ToString();
+                string filtro = tbFiltro.Text;
+                dgbArt.DataSource = negocio.filtrar(campo, criterio, filtro);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
