@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,17 +20,17 @@ namespace WindowsFormsApp
 
         private void pbPinto_Click(object sender, EventArgs e)
         {
-            
+            Process.Start("https://www.linkedin.com/in/carlos-pinto-mdp/");
         }
 
         private void pbScaglione_Click(object sender, EventArgs e)
         {
-
+            Process.Start("https://www.linkedin.com/in/franco-scaglione-62b3591b2/");
         }
 
         private void pbVisconti_Click(object sender, EventArgs e)
         {
-
+            Process.Start("https://www.linkedin.com/in/mariaclaravisconti/");
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)

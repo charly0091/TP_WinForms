@@ -293,5 +293,11 @@ namespace WindowsFormsApp
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void nosotrosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            NosotrosEstatico NosotrosEstatico = new NosotrosEstatico();
+            NosotrosEstatico.ShowDialog();
+        }
     }
 }

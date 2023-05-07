@@ -43,7 +43,7 @@ namespace WindowsFormsApp
             }
             else
             {
-                autoId = negocio.numeroId();
+                autoId = negocio.UltimoId() + 1;
                 lblAutoId.Text = autoId.ToString();
             }
         }
