@@ -227,8 +227,7 @@ namespace negocio
                         }
                         break;
                     case "Precio":
-
-                        if (filtro == "")   
+ 
 
                         switch (criterio)
                         {
