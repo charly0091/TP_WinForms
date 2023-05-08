@@ -70,7 +70,13 @@ namespace WindowsFormsApp
                     categoria = new Categoria();
                 }
 
-               categoria.Id = negocio.numeroIdModificar(this.categoria);
+                if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
+                {
+                    MessageBox.Show("Por favor, ingrese una descripción válida.");
+                    return;
+                }
+
+                categoria.Id = negocio.numeroIdModificar(this.categoria);
                categoria.Descripcion = txtDescripcion.Text;
 
                 if(categoria.Id != 0)
