@@ -55,5 +55,9 @@ namespace WindowsFormsApp
             }
         }
 
+        private void lblArtNombre_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
