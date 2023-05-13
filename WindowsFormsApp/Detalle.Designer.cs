@@ -62,6 +62,7 @@ namespace WindowsFormsApp
             this.lblArtNombre.Size = new System.Drawing.Size(96, 26);
             this.lblArtNombre.TabIndex = 1;
             this.lblArtNombre.Text = "Nombre";
+            this.lblArtNombre.Click += new System.EventHandler(this.lblArtNombre_Click);
             // 
             // lblArtId
             // 
